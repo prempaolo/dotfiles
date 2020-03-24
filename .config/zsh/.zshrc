@@ -47,7 +47,7 @@ source "$HOME/.config/.lficons"
 export LF_ICONS
 
 # Cd in current directory when closing lf
-source "/home/paolo/.config/lf/lfcd.sh"
+source "$HOME/.config/lf/lfcd.sh"
 bindkey -s '^o' 'lf\n'  # zsh
 
 # Colourful man pages
