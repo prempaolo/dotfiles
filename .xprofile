@@ -1,0 +1,27 @@
+#!/bin/sh
+
+xbindkeys
+# Set sensitivity of the trackpoint
+#xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -0.5
+# Maps caps lock to escape
+setxkbmap -option caps:escape
+# Updates mpd database
+mpc update
+# Automatically loads configuration for multiple monitors
+autorandr --change
+# Set background
+setbg
+
+xcompmgr &
+
+#----------------------DWM------------------------#
+# Enable these options if you use dwm
+
+# Status bar for dwm
+while xsetroot -name "`dwm-status-bar`"
+do
+	sleep 1
+done &
+# Notification manager for dwm
+dunst &
+

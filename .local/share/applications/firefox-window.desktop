@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=surf
+Comment=Surf minimal web browser
+Terminal=false
+Exec=firefox -new-window
+Categories=Network;WebBrowser

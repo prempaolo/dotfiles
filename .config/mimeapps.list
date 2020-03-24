@@ -1,0 +1,18 @@
+[Default Applications]
+x-scheme-handler/magnet=torrent.desktop;
+x-scheme-handler/mailto=mail.desktop;
+application/pdf=pdf.desktop;
+text/plain=text.desktop;
+text/markdown=text.desktop;
+text/x-python=text.desktop;
+text/x-shellscript=text.desktop;
+text/x-wine-extension-ini=text.desktop;
+video/mp4=mpv.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/jpg=img.desktop;
+image/gif=img.desktop;
+application/rss+xml=rss.desktop;
+text/html=firefox-window.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;

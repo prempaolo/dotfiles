@@ -1,0 +1,7 @@
+% nmap
+
+# Find IPs in local network
+nmap -sP <host-ip-range>
+
+# Basic scan
+nmap -T4 -A -p- <host>

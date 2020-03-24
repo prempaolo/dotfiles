@@ -1,0 +1,16 @@
+% my_programs
+
+# Open program to view excel file from command line
+sc-im <file-name>
+
+# Open program with Vulkan support
+pvkrun <file-name>
+
+# Manage printers
+system-config-printer
+
+# Open a minimal tray bar
+trayer --width 5 &
+
+# View md files in the terminal
+glow <file-name>
