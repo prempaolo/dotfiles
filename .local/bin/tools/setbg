@@ -2,8 +2,8 @@
 
 FILE=$1
 if [ -z "$FILE" ]; then
-	files=(~/Pictures/wallpapers/*)
+	files=(~/Pictures/wallpapers/wallpapers/*)
 	xwallpaper --zoom "${files[RANDOM % ${#files[@]}]}"
 else
-	xwallpaper --zoom ~/Pictures/wallpapers/"$FILE"
+	xwallpaper --zoom ~/Pictures/wallpapers/wallpapers/"$FILE"
 fi
