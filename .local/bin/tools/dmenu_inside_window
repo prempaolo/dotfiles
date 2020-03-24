@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -t 0 ]; then 
+	dmenu_run -w "$(xwininfo -id "$(xdotool getwindowfocus)" | grep "Window id" | awk -F " " '{ print $4 }')"
+else 
+	dmenu -w "$(xwininfo -id "$(xdotool getwindowfocus)" | grep "Window id" | awk -F " " '{ print $4 }')" "$@"
+fi

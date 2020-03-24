@@ -1,0 +1,3 @@
+#!/bin/sh
+
+Xephyr :1 -ac -br -screen 1440x900 -resizeable -reset -terminate

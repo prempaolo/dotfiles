@@ -1,0 +1,72 @@
+#!/bin/sh
+
+DOTFILES_PATH="$HOME/Projects/dotfiles"
+
+create_dir() {
+	[ ! -d "$DOTFILES_PATH/.config/$1" ] && mkdir "$DOTFILES_PATH/.config/$1"
+}
+
+# Create folders if they don't exist
+[ ! -d "$DOTFILES_PATH/.config" ] && mkdir "$DOTFILES_PATH/.config"
+[ ! -d "$DOTFILES_PATH/.local" ] && mkdir "$DOTFILES_PATH/.local"
+
+# xprofile, xinitrc, profile...
+cp -r "$HOME/.bashrc" "$HOME/.bash_profile" "$HOME/.profile" "$HOME/.xprofile" "$HOME/.zprofile" "$HOME/.xinitrc" "$HOME/.xbindkeysrc" "$DOTFILES_PATH/"
+
+# dunst
+create_dir "dunst"
+cp -r "$HOME/.config/dunst/dunstrc" "$DOTFILES_PATH/.config/dunst/"
+
+# gtk-3.0
+cp -r "$HOME/.config/gtk-3.0" "$DOTFILES_PATH/.config/"
+
+# htop
+create_dir "htop"
+cp -r "$HOME/.config/htop/htoprc" "$DOTFILES_PATH/.config/htop/"
+
+# lf
+cp -r "$HOME/.config/lf" "$DOTFILES_PATH/.config/"
+cp -r "$HOME/.config/.lficons" "$DOTFILES_PATH/.config/"
+
+# mpd
+cp -r "$HOME/.config/mpd" "$DOTFILES_PATH/.config/"
+
+# navi
+cp -r "$HOME/.config/navi" "$DOTFILES_PATH/.config/"
+
+# ncmpcpp
+cp -r "$HOME/.config/ncmpcpp" "$DOTFILES_PATH/.config/"
+
+# nvim
+create_dir "nvim"
+cp -r "$HOME/.config/nvim/init.vim" "$DOTFILES_PATH/.config/nvim/"
+cp -r "$HOME/.config/nvim/colors" "$DOTFILES_PATH/.config/nvim/"
+[ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
+[ ! -d "$DOTFILES_PATH/.local/share/nvim" ] && mkdir "$DOTFILES_PATH/.local/share/nvim"
+[ ! -d "$DOTFILES_PATH/.local/share/nvim/site" ] && mkdir "$DOTFILES_PATH/.local/share/nvim/site"
+cp -r "$HOME/.local/share/nvim/site/autoload" "$DOTFILES_PATH/.local/share/nvim/site/"
+
+# sxiv
+cp -r "$HOME/.config/sxiv" "$DOTFILES_PATH/.config/"
+
+# termite
+cp -r "$HOME/.config/termite" "$DOTFILES_PATH/.config"
+
+# zathura
+cp -r "$HOME/.config/zathura" "$DOTFILES_PATH/.config"
+
+# zsh
+create_dir "zsh"
+cp -r "$HOME/.config/zsh/.zshrc" "$DOTFILES_PATH/.config/zsh/"
+
+# aliasrc
+cp -r "$HOME/.config/aliasrc" "$DOTFILES_PATH/.config/"
+
+# mime-apps
+cp -r "$HOME/.config/mimeapps.list" "$DOTFILES_PATH/.config/"
+[ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
+cp -r "$HOME/.local/share/applications" "$DOTFILES_PATH/.local/share/"
+
+# scripts
+[ ! -d "$DOTFILES_PATH/.local/bin" ] && mkdir "$DOTFILES_PATH/.local/bin"
+cp -r "$HOME/.local/bin/tools" "$DOTFILES_PATH/.local/bin/"

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd /media/Data/Deezloader
+./SMLoadr-linux-x64
+/media/Data/Deezloader/rename_folders.sh
+/media/Data/Deezloader/resize_images.sh
+cp -r /media/Data/Deezloader/DOWNLOADS/* /media/Data/Music/
+rm -r /media/Data/Deezloader/DOWNLOADS/*

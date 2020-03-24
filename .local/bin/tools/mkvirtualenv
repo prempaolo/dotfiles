@@ -1,0 +1,44 @@
+#!/bin/sh
+
+ENV=$1
+PYTHON=$2
+
+print_help() {
+	echo ""
+	echo "Usage: mkvirtualenv [env] [python_version]"
+	echo ""
+	echo "E.g. mkvirtualenv peppa python2.7"
+	echo "-> creates a new virtual environment called peppa using python2.7"
+	echo ""
+	echo "Other options:"
+	echo ""
+	echo "	mkvirtualenv [env]	-> enters an existing virtual environment"
+	echo "	mkvirtualenv print	-> prints this help page"
+	echo "	mkvirtualenv exit	-> exits current virtual environment"
+	echo "	mkvirtualenv -d [env]	-> deletes an existing virtual environment"
+	echo ""
+}
+
+if [ -z "$ENV" ] || [ "$ENV" = "help" ]; then
+	print_help
+elif [ "$ENV" = "exit" ]; then
+	echo "Exiting virtal environment..."
+	deactivate
+elif [ "$ENV" = "-d" ]; then
+	ENV=$2
+	echo "Deleting virtual environment $ENV..."
+	rm -r "$HOME/.virtualenvs/$ENV"
+else
+	echo "Creating $ENV environment..."
+	if [ -d "$HOME/.virtualenvs/$ENV" ]; then
+		source "$HOME/.virtualenvs/$ENV/bin/activate"
+	else
+		if [ -z "$PYTHON" ]; then
+			virtualenv "$HOME/.virtualenvs/$ENV"
+			source "$HOME/.virtualenvs/$ENV/bin/activate"
+		else
+			virtualenv --python="/usr/bin/$PYTHON" "$HOME/.virtualenvs/$ENV"
+			source "$HOME/.virtualenvs/$ENV/bin/activate"
+		fi
+	fi
+fi

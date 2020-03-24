@@ -1,0 +1,10 @@
+#!/bin/bash
+mkdir /tmp/ghidra
+touch /tmp/ghidra/.docker.xauth
+xauth nlist :0 | sed -e 's/^..../ffff/' | xauth -f /tmp/ghidra/.docker.xauth nmerge -
+if [[ "$1" == "update" ]]; then
+        docker stop ghidra
+        docker rm ghidra
+        docker rmi blacktop/ghidra
+fi
+docker ps -a | grep ghidra || (docker run --name ghidra -ti -v /tmp/ghidra:/tmp -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY -e XAUTHORITY=/tmp/.docker.xauth blacktop/ghidra) && docker start ghidra

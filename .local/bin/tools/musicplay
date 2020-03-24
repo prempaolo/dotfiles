@@ -1,0 +1,5 @@
+#!/bin/sh
+
+NAME="$(echo "$1" | sed 's/.ly/.midi/g')"
+
+timidity "$NAME"

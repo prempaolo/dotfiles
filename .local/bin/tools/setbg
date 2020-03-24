@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILE=$1
+if [ -z "$FILE" ]; then
+	files=(~/Pictures/wallpapers/*)
+	xwallpaper --zoom "${files[RANDOM % ${#files[@]}]}"
+else
+	xwallpaper --zoom ~/Pictures/wallpapers/"$FILE"
+fi
