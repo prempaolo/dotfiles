@@ -33,7 +33,7 @@ export __GL_SHADER_DISK_CACHE_PATH="$HOME/.config/nvidia"
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json:/usr/share/vulkan/icd.d/nv_vulkan_wrapper.json:/usr/share/vulkan/icd.d/nvidia_icd.json
 
 # Navi path for cheats
-export NAVI_PATH=/opt/navi/cheats:~/.config/navi/cheats
+export NAVI_PATH=/opt/navi/cheats:"$HOME"/.config/navi/cheats
 
 # For my notes program
 export NOTES_HOME=/home/paolo/Documents/Notes

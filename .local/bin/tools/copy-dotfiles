@@ -14,7 +14,9 @@ create_dir() {
 cp "$HOME/.profile" "$HOME/.xprofile" "$HOME/.xinitrc" "$DOTFILES_PATH/"
 
 # bash
-cp "$HOME/.bashrc" "$DOTFILES_PATH/"
+create_dir "bash"
+cp "$HOME/.bash_profile" "$DOTFILES_PATH/"
+cp "$HOME/.config/bash/.bashrc" "$DOTFILES_PATH/.config/bash/"
 
 # xbindkeys
 create_dir "xbindkeys"
