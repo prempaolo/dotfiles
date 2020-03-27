@@ -15,7 +15,7 @@ export LF_ICONS
 set -o vi
 
 # Cd in current directory when closing lf
-source "/home/paolo/.config/lf/lfcd.sh"
+source "$HOME/.config/lf/lfcd.sh"
 
 # fzf key bindings and completion
 source "/usr/share/fzf/completion.bash"
