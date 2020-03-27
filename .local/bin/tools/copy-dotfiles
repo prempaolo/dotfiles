@@ -10,12 +10,11 @@ create_dir() {
 [ ! -d "$DOTFILES_PATH/.config" ] && mkdir "$DOTFILES_PATH/.config"
 [ ! -d "$DOTFILES_PATH/.local" ] && mkdir "$DOTFILES_PATH/.local"
 
-# xprofile, xinitrc, profile...
+# xprofile, xinitrc, profile
 cp "$HOME/.profile" "$HOME/.xprofile" "$HOME/.xinitrc" "$DOTFILES_PATH/"
 
 # bash
-create_dir "bash"
-cp "$HOME/.config/bash/.bashrc" "$DOTFILES_PATH/.config/bash/"
+cp "$HOME/.bashrc" "$DOTFILES_PATH/"
 
 # xbindkeys
 create_dir "xbindkeys"

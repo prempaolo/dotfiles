@@ -15,7 +15,7 @@ export BROWSER="brave"
 export READER="zathura"
 export FILE="lf"
 export OPENER="xdg-open"
-#export SHELL=/bin/zsh
+export SHELL=/bin/zsh
 # Needed, otherwise mailsync returns error
 export STATUSBAR="lel"
 
@@ -40,10 +40,6 @@ export NOTES_HOME=/home/paolo/Documents/Notes
 
 # For Java apps problem in dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-# Source .bashrc
-echo "$0" | grep "bash$" >/dev/null && [ -f "$HOME"/.config/bash/.bashrc ] && source "$HOME/.config/bash/.bashrc"
-source "$HOME/.config/bash/.bashrc"
 
 # Start graphical server if dwm not already running.
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x dwm >/dev/null && exec startx
