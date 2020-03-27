@@ -30,8 +30,8 @@ set drawbox on
 map <enter> shell
 
 # map fzf to the f key
-map f $lf -remote "send $id select '$(fzfp)'"
-map F $lf -remote "send $id select '$(fd --type d | fzfp)'"
+map f $lf -remote "send $id select '$(fzfp || fzf)'"
+map F $lf -remote "send $id select '$(find . -type d | fzfp || find . -type d | fzf)'"
 
 # execute current file (must be executable)
 map x $$f
