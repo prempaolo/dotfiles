@@ -18,8 +18,8 @@ set -o vi
 source "$HOME/.config/lf/lfcd.sh"
 
 # fzf key bindings and completion
-source "/usr/share/fzf/completion.bash"
-source "/usr/share/fzf/key-bindings.bash"
+source "$HOME/.local/share/fzf/completion.bash"
+source "$HOME/.local/share/fzf/key-bindings.bash"
 
 # Colourful man pages
 man() {

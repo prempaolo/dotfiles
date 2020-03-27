@@ -80,3 +80,7 @@ cp -r "$HOME/.local/share/applications" "$DOTFILES_PATH/.local/share/"
 [ ! -d "$DOTFILES_PATH/.local/bin" ] && mkdir "$DOTFILES_PATH/.local/bin"
 cp -r "$HOME/.local/bin/tools" "$DOTFILES_PATH/.local/bin/"
 cp -r "$HOME/.local/bin/home-clean" "$DOTFILES_PATH/.local/bin/"
+
+# fzf
+[ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
+cp -r "$HOME/.local/share/fzf" "$DOTFILES_PATH/.local/share/"

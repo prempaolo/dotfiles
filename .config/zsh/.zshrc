@@ -65,5 +65,5 @@ man() {
 	man "$@"
 }
 
-source "/usr/share/fzf/completion.zsh"
-source "/usr/share/fzf/key-bindings.zsh"
+source "$HOME/.local/share/fzf/completion.zsh"
+source "$HOME/.local/share/fzf/key-bindings.zsh"
