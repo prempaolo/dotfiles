@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/xournalpp ] && mkdir "$HOME"/.config/xournalpp
+env HOME="$HOME"/.config/xournalpp /usr/bin/xournalpp "$@"

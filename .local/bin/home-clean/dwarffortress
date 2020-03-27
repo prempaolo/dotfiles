@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/Games/dwarffortress ] && mkdir "$HOME"/Games/dwarffortress
+env HOME="$HOME"/Games/dwarffortress /usr/bin/dwarffortress "$@"

@@ -1,5 +1,7 @@
 # ZSH Config
 
+HISTFILE="$ZDOTDIR"/.zsh_history
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.local/share/oh-my-zsh
 

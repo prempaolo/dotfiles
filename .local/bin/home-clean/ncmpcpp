@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/ncmpcpp ] && mkdir "$HOME"/.config/ncmpcpp
+env HOME="$HOME"/.config/ncmpcpp /usr/bin/ncmpcpp "$@"

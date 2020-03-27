@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/Games/dosbox ] && mkdir "$HOME"/Games/dosbox
+env HOME="$HOME"/Games/dosbox /usr/bin/dosbox "$@"

@@ -10,5 +10,6 @@ alias yi="yay -S"
 alias yr="yay -R"
 alias yu="yay -Syyu"
 alias na='CMD="$(navi --print)"; print -s "$CMD"; eval "$CMD"'
+alias hc="home-cleaner"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}

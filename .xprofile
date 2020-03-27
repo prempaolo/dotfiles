@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xbindkeys
+xbindkeys -f "$HOME"/.config/xbindkeys/config
 # Set sensitivity of the trackpoint
 #xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -0.5
 # Maps caps lock to escape

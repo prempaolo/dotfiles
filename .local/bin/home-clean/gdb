@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/gdb ] && mkdir "$HOME"/.config/gdb
+env HOME="$HOME"/.config/gdb /usr/bin/gdb "$@"

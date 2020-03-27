@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/nvidia-xrun ] && mkdir "$HOME"/.config/nvidia-xrun
+env HOME="$HOME"/.config/nvidia-xrun /usr/bin/nvidia-xrun "$@"

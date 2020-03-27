@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/git ] && mkdir "$HOME"/.config/git
+env HOME="$HOME"/.config/git /usr/bin/git "$@"

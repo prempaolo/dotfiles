@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/mbsync ] && mkdir "$HOME"/.config/mbsync
+env HOME="$HOME"/.config/mbsync /usr/bin/mbsync "$@"

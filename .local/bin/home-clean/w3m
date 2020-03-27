@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/w3m ] && mkdir "$HOME"/.config/w3m
+env HOME="$HOME"/.config/w3m /usr/bin/w3m "$@"

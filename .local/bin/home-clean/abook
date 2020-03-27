@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/abook ] && mkdir "$HOME"/.config/abook
+env HOME="$HOME"/.config/abook /usr/bin/abook "$@"

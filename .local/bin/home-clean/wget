@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/wget ] && mkdir "$HOME"/.config/wget
+env HOME="$HOME"/.config/wget /usr/bin/wget "$@"

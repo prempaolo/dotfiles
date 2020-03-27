@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/adb ] && mkdir "$HOME"/.config/adb
+env HOME="$HOME"/.config/adb /usr/bin/adb "$@"

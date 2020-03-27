@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/mitmproxy ] && mkdir "$HOME"/.config/mitmproxy
+env HOME="$HOME"/.config/mitmproxy /usr/bin/mitmproxy "$@"

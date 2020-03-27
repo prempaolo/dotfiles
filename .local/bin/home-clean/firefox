@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/firefox ] && mkdir "$HOME"/.config/firefox
+env HOME="$HOME"/.config/firefox /usr/bin/firefox "$@"

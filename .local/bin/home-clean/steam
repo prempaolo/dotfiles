@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/Games/steam ] && mkdir "$HOME"/Games/steam
+env HOME="$HOME"/Games/steam /usr/bin/steam "$@"

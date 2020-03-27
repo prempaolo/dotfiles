@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/tmux ] && mkdir "$HOME"/.config/tmux
+env HOME="$HOME"/.config/tmux /usr/bin/tmux "$@"

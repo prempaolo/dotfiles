@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/thunderbird ] && mkdir "$HOME"/.config/thunderbird
+env HOME="$HOME"/.config/thunderbird /usr/bin/thunderbird "$@"
