@@ -66,6 +66,7 @@ cp -r "$HOME/.config/zathura" "$DOTFILES_PATH/.config"
 # zsh
 create_dir "zsh"
 cp "$HOME/.config/zsh/.zshrc" "$DOTFILES_PATH/.config/zsh/"
+cp "$HOME/.zprofile" "$DOTFILES_PATH/"
 
 # aliasrc
 cp -r "$HOME/.config/aliasrc" "$DOTFILES_PATH/.config/"
