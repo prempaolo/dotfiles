@@ -21,18 +21,5 @@ source "$HOME/.config/lf/lfcd.sh"
 source "$HOME/.local/share/fzf/completion.bash"
 source "$HOME/.local/share/fzf/key-bindings.bash"
 
-# Colourful man pages
-man() {
-	env \
-	LESS_TERMCAP_mb=$'\e[01;31m' \
-	LESS_TERMCAP_md=$'\e[01;31m' \
-	LESS_TERMCAP_me=$'\e[0m' \
-	LESS_TERMCAP_se=$'\e[0m' \
-	LESS_TERMCAP_so=$'\e[01;44;33m' \
-	LESS_TERMCAP_ue=$'\e[0m' \
-	LESS_TERMCAP_us=$'\e[01;32m' \
-	man "$@"
-}
-
 # Used to set window name with the program executed in bash
 #trap 'printf "\033]0;%s\007" "${BASH_COMMAND//[^[:print:]]/}"' DEBUG

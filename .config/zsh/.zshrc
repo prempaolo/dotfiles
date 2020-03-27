@@ -52,18 +52,5 @@ export LF_ICONS
 source "$HOME/.config/lf/lfcd.sh"
 bindkey -s '^o' 'lf\n'  # zsh
 
-# Colourful man pages
-man() {
-	env \
-	LESS_TERMCAP_mb=$'\e[01;31m' \
-	LESS_TERMCAP_md=$'\e[01;31m' \
-	LESS_TERMCAP_me=$'\e[0m' \
-	LESS_TERMCAP_se=$'\e[0m' \
-	LESS_TERMCAP_so=$'\e[01;44;33m' \
-	LESS_TERMCAP_ue=$'\e[0m' \
-	LESS_TERMCAP_us=$'\e[01;32m' \
-	man "$@"
-}
-
 source "$HOME/.local/share/fzf/completion.zsh"
 source "$HOME/.local/share/fzf/key-bindings.zsh"
