@@ -10,7 +10,7 @@ pvkrun <file-name>
 system-config-printer
 
 # Open a minimal tray bar
-trayer --width 5 &
+trayer --width 5
 
 # View md files in the terminal
 glow <file-name>

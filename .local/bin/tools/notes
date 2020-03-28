@@ -1,201 +1,193 @@
 #!/bin/sh
 
-if [ -z "$NOTES_HOME" ]; then
-	echo "Specify the home directory for your notes by setting up the NOTES_HOME environment variable"
-	exit 1
-else 
-	# We initialize our CUR_PATH variable (that will keep track of tags and sub-tags) as our NOTES_HOME environment variable
-	CUR_PATH="$NOTES_HOME"
-fi
+NOTES_HOME="$HOME"/Documents/Notes
+NAVI_PATH="$HOME"/.config/navi/cheats
+CUR_TAG=""
 
-NAVI_PATH="/home/paolo/.config/navi/cheats"
+# Create notes home if doesn't exist
+[ ! -d "$HOME/Documents" ] && mkdir "$HOME/Documents"
+[ ! -d "$NOTES_HOME" ] && mkdir "$NOTES_HOME"
 
-create_new_tag() {
-		clear
-		echo "Select tag name: "
-		read -r tag_name
-		if [ -d "$CUR_PATH/$tag_name" ]; then
-			clear
-			echo "Tag already exists, do you want to use it or create a new one?"
-			echo -e "\tu - use current tag"
-			echo -e "\tn - create new tag"
-			read -s -n 1 tag
-			if [ $tag == "n" ]; then
-				create_new_tag
-			elif [ $tag == "u" ]; then
-				echo "use tag"
-			fi
-		else
-			mkdir "$CUR_PATH/$tag_name"
-			CHOSEN_TAG="$tag_name"
-			CUR_PATH="$CUR_PATH"/"$CHOSEN_TAG"
-			main_tag
-		fi
+# Find files and preview them in fzf (first try bat, then highlight and cat if no other method works)
+find_file() {
+	echo "$(find "$1" -mindepth 1 -type f | sed "s#$2/##" | fzf --preview 'bat --style=numbers --color=always '$2'/{} || highlight -O ansi '$2'/{} || cat '$2'/{}')"
 }
 
-main_tag() {
-	# If no tag is chosen, we proceed here
-	if [ -z $CHOSEN_TAG ]; then
-		clear
-		if [[ "$CUR_PATH" == "$NOTES_HOME" ]]; then
-			echo "No tag currently selected!"
-		else
-			echo "Current tag: $(echo "$CUR_PATH" | sed "s#$NOTES_HOME/##")"
-		fi
-		echo "Select an option:"
-		echo -e "\tn - new tag"
-		echo -e "\ts - search tag"
-		echo -e "\td - delete tag"
-		read -s -n 1 tag
-		if [ $tag == "n" ]; then
-			create_new_tag
-		elif [ $tag == "s" ]; then
-			CHOSEN_TAG="$(echo "$(find "$CUR_PATH" -mindepth 1 -type d | sed "s#$CUR_PATH/##" | fzf)")"
-			if [ -z "$CHOSEN_TAG" ]; then
-				exit 1
-			fi
-			CUR_PATH="$CUR_PATH"/"$CHOSEN_TAG"
-			main_tag
-		elif [ $tag == "d" ]; then
-			CHOSEN_TAG="$(echo "$(find "$CUR_PATH" -mindepth 1 -type d | sed "s#$CUR_PATH/##" | fzf)")"
-			if [ -z "$CHOSEN_TAG" ]; then
-				exit 1
-			fi
-			echo "Are you sure you want to remove tag $CHOSEN_TAG?"
-			echo -e "\ty - yes"
-			echo -e "\tn - no"
-			val=""
-			while [[ $val != "y" && $val != "n" ]]; do
-				read -s -n 1 val
-				if [ $val == "y" ]; then
-					rm -r "$CUR_PATH/$CHOSEN_TAG"
-					echo "Tag deleted successfully!"
-					main
-				elif [ $val == "n" ]; then
-					main
-				fi
-			done
-		fi
-	# If a tag is chosen, we proceed to the sub-tag option
-	else 
-		main_sub_tag
-	fi
+find_dir() {
+	echo "$(find "$1" -mindepth 1 -type d | sed "s#$1##" | fzf)"
 }
 
-main_sub_tag() {
+print_file_without_path() {
+ echo "$1" | awk -F '/' '{ print $NF}'
+}
+
+get_path() {
+ echo "$1" | sed 's![^/]*$!!'
+}
+
+search_tag() {
+	CUR_TAG="$(find_dir $NOTES_HOME/$CUR_TAG)"
+	main_tag
+}
+
+search_note() {
+	NOTE="$(find_file $NOTES_HOME/$CUR_TAG $NOTES_HOME)"
+	[ -f "$NOTES_HOME/$NOTE" ] &&	nvim "$NOTES_HOME/$NOTE" && exit 1
+}
+
+search_navi() {
+	NAVI="$(find_file $NAVI_PATH $NAVI_PATH)"
+	[ -f "$NAVI_PATH/$NAVI" ] && nvim "$NAVI_PATH/$NAVI" && exit 1
+}
+
+new_tag() {
 	clear
-	if [[ "$CUR_PATH" == "$NOTES_HOME" ]]; then
-		echo "No tag currently selected!"
-	else
-		echo "Current tag: $(echo "$CUR_PATH" | sed "s#$NOTES_HOME/##")"
-	fi
-	echo "Select an option:"
-	echo -e "\tn - new note in current tag"
-	echo -e "\ts - search note in current tag"
-	echo -e "\tt - new sub-tag"
-	echo -e "\tu - search sub-tag"
-	echo -e "\td - delete sub-tag"
-	read -s -n 1 tag
-	if [ $tag == "n" ]; then
-		echo "Choose note name: "
-		read -r note_name
-		nvim "$CUR_PATH/$note_name".md
-	elif [ $val == "s" ]; then
-		NOTE="$(echo "$(find "$CUR_PATH/$CHOSEN_TAG" -mindepth 1 -type f | fzf --preview 'bat --style=numbers --color=always {} | head -500')")"
-		if [ ! -z "$NOTE" ]; then
-			nvim "$NOTE"
-		fi
-	elif [ $tag == "t" ]; then
-		create_new_tag
-	elif [ $tag == "u" ]; then
-		CHOSEN_TAG="$(echo "$(find "$CUR_PATH" -mindepth 1 -type d | sed "s#$CUR_PATH/##" | fzf)")"
-		if [ -z "$CHOSEN_TAG" ]; then
-			exit 1
-		fi
-		CUR_PATH="$CUR_PATH"/"$CHOSEN_TAG"
-		main_tag
-	elif [ $tag == "d" ]; then
-		CHOSEN_TAG="$(echo "$(find "$CUR_PATH" -mindepth 1 -type d | sed "s#$CUR_PATH/##" | fzf)")"
-		if [ -z "$CHOSEN_TAG" ]; then
-			exit 1
-		fi
+	echo "Select tag name: "
+	read -r tag_name
+	if [ -z "$CUR_TAG" ]; then CUR_TAG="$tag_name"; else CUR_TAG="$CUR_TAG/$tag_name"; fi
+	[ ! -d "$NOTES_HOME/$CUR_TAG" ] && mkdir "$NOTES_HOME/$CUR_TAG"
+	main_tag
+}
+
+new_note() {
+	clear
+	echo "Choose note name: "
+	read -r note_name
+	nvim "$NOTES_HOME/$CUR_TAG/$note_name"
+}
+
+new_navi() {
+	clear
+	echo "Select a new navi cheat name: "
+	read -r navi_name
+	nvim "$NAVI_PATH/$navi_name".cheat
+	exit 1
+}
+
+delete_tag() {
+	CUR_TAG="$(find_dir $NOTES_HOME/$CUR_TAG)"
+	[ ! -z "$CUR_TAG" ] && {
 		clear
-		echo "Are you sure you want to remove sub-tag $CHOSEN_TAG?"
-		echo -e "\ty - yes"
-		echo -e "\tn - no"
-		val=""
-		while [[ $val != "y" && $val != "n" ]]; do
-			read -s -n 1 val
-			if [ $val == "y" ]; then
-				rm -r "$CUR_PATH/$CHOSEN_TAG"
-				echo "Tag deleted successfully!"
-				main
-			elif [ $val == "n" ]; then
-				main
-			fi
-		done
-	elif [ $tag == "s" ]; then
-		NOTE="$(echo "$(find "$CUR_PATH" -mindepth 1 -type f | sed "s#$NOTES_HOME/##" | fzf --preview 'bat --style=numbers --color=always $NOTES_HOME/{} | head -500')")"
-		if [ ! -z "$NOTE" ]; then
-			nvim "$NOTES_HOME"/"$NOTE"
-		fi
-	fi
+		echo -e "Current tag: $CUR_TAG\nDeleting a tag deletes also all the notes inside that tag, do you want to proceed? [y,N]"
+		read -s -n 1 choice
+		[ "$choice" == "y" ] && { rm -r "$NOTES_HOME/$CUR_TAG"; echo "Tag deleted successfully"; }
+	}
+	exit 1
+}
+
+delete_note() {
+	NOTE="$(find_file $NOTES_HOME/$CUR_TAG $NOTES_HOME)"
+	[ ! -z "$NOTE" ] && {
+		clear
+		echo -e "Are you sure you want to remove note: $(print_file_without_path $NOTE)? [y,N]"
+		read -s -n 1 choice
+		[ "$choice" == "y" ] && { rm "$NOTES_HOME/$NOTE"; echo "Note deleted successfully"; }
+	}
+	exit 1
+}
+
+delete_navi() {
+	NAVI="$(find_file $NAVI_PATH $NAVI_PATH)"
+	[ ! -z "$NAVI" ] && {
+		clear
+		echo -e "Are you sure you want to remove navi cheat: $(print_file_without_path $NAVI)? [y,N]"
+		read -s -n 1 choice
+		[ "$choice" == "y" ] && { rm "$NAVI_PATH/$NAVI"; echo "Navi cheat deleted successfully"; }
+	}
+	exit 1
+}
+
+change_note() {
+	NOTE="$(find_file $NOTES_HOME/$CUR_TAG $NOTES_HOME)"
+	OLD_NOTE="$(print_file_without_path $NOTE)"
+	CUR_PATH="$(get_path $NOTE)"
+	[ ! -z "$OLD_NOTE" ] && {
+		clear
+		echo -e "Current note name: $OLD_NOTE\n\nChoose new note name: "
+		read -r new_note_name
+		echo -e "Are you sure you want to rename $OLD_NOTE in $new_note_name? [y/N]"
+		read -s -n 1 choice
+		[ "$choice" == "y" ] && { mv "$NOTES_HOME/$NOTE" "$NOTES_HOME/$CUR_PATH/$new_note_name"; echo "Note renamed successfully"; }
+	}
+	exit 1
+}
+
+change_navi() {
+	OLD_NAVI="$(find_file $NAVI_PATH $NAVI_PATH)"
+	[ ! -z "$OLD_NAVI" ] && {
+		clear
+		echo -e "Current navi cheat name: $OLD_NAVI\n\nChoose new note name: "
+		read -r new_navi_name
+		echo -e "Are you sure you want to rename $OLD_NAVI in $new_navi_name.cheat? [y/N]"
+		read -s -n 1 choice
+		[ "$choice" == "y" ] && { mv "$NAVI_PATH/$OLD_NAVI" "$NAVI_PATH/$new_navi_name.cheat"; echo "Navi cheat renamed successfully"; }
+	}
+	exit 1
 }
 
 main_navi() {
 	clear
-	echo "Select a new navi cheat name: "
-	read -r navi_name
-	nvim "$NAVI_PATH"/"$navi_name".cheat
-}
-
-delete_note() {
-	NOTE="$(echo "$(find "$CUR_PATH/$CHOSEN_TAG" -mindepth 1 -type f | sed "s#$NOTES_HOME/##" | fzf --preview 'bat --style=numbers --color=always $NOTES_HOME/{} | head -500')")"
-	if [ ! -z "$NOTE" ]; then
-		echo "Are you sure you want to delete $NOTE?"
-		echo -e "\ty - yes"
-		echo -e "\tn - no"
-		val=""
-		while [[ $val != "y" && $val != "n" ]]; do
-			read -s -n 1 val
-			if [ $val == "y" ]; then
-				rm "$NOTES_HOME"/"$NOTE"
-				echo "Note deleted successfully!"
-				main
-			elif [ $val == "n" ]; then
-				main
-			fi
-		done
-	fi
-}
-
-main() {
-	clear
-	echo -e "Select an option:"
-	echo -e "\tn - new note"
-	echo -e "\ts - search note"
-	echo -e "\td - delete note"
-	echo -e "\tc - new navi cheat"
-	echo -e "\tv - search navi cheat"
+	echo -e "Select an option:\n\tn - new navi cheat\n\ts - search and edit navi cheat\n\td - delete navi cheat\n\tc - change navi cheat name"
 	val=""
 	while [[ $val != "q" ]]; do
 		read -s -n 1 val
 		case $val in
-			"n") main_tag && exit 1;;
-			"s") NOTE="$(echo "$(find "$CUR_PATH" -mindepth 1 -type f | sed "s#$NOTES_HOME/##" | fzf --preview 'bat --style=numbers --color=always $NOTES_HOME/{} | head -500')")"
-					if [ ! -z "$NOTE" ]; then
-						nvim "$NOTES_HOME"/"$NOTE" && exit 1
-					fi;;
-			"d") delete_note && exit 1;;
-			"c") main_navi && exit 1;;
-			"v")
-				NOTE="$(echo "$(find "$NAVI_PATH" -mindepth 1 -type f | sed "s#$NAVI_PATH/##" | fzf --preview 'bat --style=numbers --color=always $NAVI_PATH/{} | head -500')")"
-				if [ ! -z "$NOTE" ]; then
-					nvim "$NAVI_PATH"/"$NOTE" && exit 1
-				fi;;
+			"n") new_navi && exit 1;;
+			"s") search_navi && exit 1;;
+			"d") delete_navi && exit 1;;
+			"c") change_navi && exit 1;;
 			*)
 		esac
 	done
 }
 
-main
+main_tag() {
+	clear
+	if [ -z "$CUR_TAG" ]; then
+		echo -e "No tag currently selected!\nSelect an option:\n\tn - new tag\n\ts - search tag\n\td - delete tag"
+	else
+		echo -e "Current tag: $CUR_TAG\nSelect an option:\n\tn - new note in current tag\n\ts - search and edit note in current tag\n\tt - new sub-tag\n\tu - search sub-tag\n\td - delete sub-tag"
+	fi
+	while [[ $val != "q" ]]; do
+		read -s -n 1 val
+		case $val in
+			"n") if [ -z "$CUR_TAG" ]; then new_tag; else new_note; fi && exit 1;;
+			"s") if [ -z "$CUR_TAG" ]; then search_tag; else search_note; fi && exit 1;;
+			"t") new_tag && exit 1;;
+			"d") delete_tag && exit 1;;
+			"u") search_tag && exit 1;;
+			*)
+		esac
+	done
+}
+
+main_notes() {
+	clear
+	echo -e "Select an option:\n\tn - new note\n\ts - search and edit note\n\td - delete note\n\tc - change note name"
+	val=""
+	while [[ $val != "q" ]]; do
+		read -s -n 1 val
+		case $val in
+			"n") main_tag && exit 1;;
+			"s") search_note && exit 1;;
+			"d") delete_note && exit 1;;
+			"c") change_note && exit 1;;
+			*)
+		esac
+	done
+}
+
+############### MAIN EXECUTION CODE ##################
+
+clear
+echo -e "Select an option:\n\tn - note menu\n\ta - navi menu\n\tt - tag menu"
+val=""
+while [[ $val != "q" ]]; do
+	read -s -n 1 val
+	case $val in
+		"n") main_notes && exit 1;;
+		"a") main_navi && exit 1;;
+		"t") main_tag && exit 1;;
+		*)
+	esac
+done

@@ -51,9 +51,6 @@ export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json:/usr/share
 # Navi path for cheats
 export NAVI_PATH=/opt/navi/cheats:"$HOME"/.config/navi/cheats
 
-# For my notes program
-export NOTES_HOME=/home/paolo/Documents/Notes
-
 # For Java apps problem in dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
 

@@ -1,9 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
 FILE=$1
-if [ -z "$FILE" ]; then
-	files=(~/Pictures/wallpapers/wallpapers_to_validate/*)
-	xwallpaper --zoom "${files[RANDOM % ${#files[@]}]}"
-else
-	xwallpaper --zoom ~/Pictures/wallpapers/wallpapers_to_validate/"$FILE"
-fi
+[ -z "$FILE" ] && 
+	FILE="$(find "$HOME"/Pictures/wallpapers/wallpapers_to_validate/* -type f | shuf -n 1)"
+xwallpaper --zoom "$FILE"
