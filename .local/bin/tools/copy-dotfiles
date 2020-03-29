@@ -2,7 +2,7 @@
 
 DOTFILES_PATH="$HOME/Projects/dotfiles"
 
-while getopts ":ih" o; do case "${o}" in
+while getopts ":i:h" o; do case "${o}" in
 	h) printf "Use option -i to specify a path from where to copy dotfiles in your home\n" && exit ;;
 	i) DOTFILES_PATH="$HOME" && HOME="$OPTARG" ;;
 	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;

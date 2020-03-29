@@ -194,7 +194,6 @@ main_menu() {
 
 ############### MAIN EXECUTION CODE ##################
 
-# Check for aguments
 while getopts ":hm" o; do case "${o}" in
 	h) printf "Run notes -m to enter the menu, otherwise search for a note\\n" && exit ;;
 	m) main_menu && exit ;;
