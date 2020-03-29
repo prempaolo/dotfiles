@@ -1,0 +1,201 @@
+#!/bin/sh
+
+xdotool key Control+minus
+xdotool key Control+minus
+xdotool key Control+minus
+xdotool key Control+minus
+clear
+ffplay -af volume=0.05 -autoexit -nodisp "$HOME/.local/bin/stupid_programs/"Nani.mp3 &> /dev/null &
+cat << "EOF"
+88888888888RRRRRRRRRRRRRRRRRRRRd6k6666kkkhkkk6$9qqKOKKqqqKKqqq9999qq$kmSz/|>r>rrrr*?|\iJSmXE666hhhEhhhhk666kkkkk6qODRDDDRRRRRDDDDRRRRRRR8RRRRRRR8RRRRRRRRR8888RRRRRR
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQNggNNNgggggggNNNNN###BB####NNNNNRKX}\^:,,'''''''''''''',,::^|v2hH8NNNg88M8888MgNBQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ#NgggggggNNNNNNNNNNNNNNNN#NNMdh}|;,'''''''''''''''''',,,,,,,,,'',:;*/Jye6KOOq6heoXNQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQNggggggggggNNNNNNNNNNNNNNDm1|;_,''''''''''''''',,,::;^>*||||||>^;",'''''',~__~,,,'':1DQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQNgggggggggggNNNNNNNNNNDXJ|;,''''''''''''''''',_;;r?|\\\\\\\\\\\\\/|r:,,'''''''''''''''_|hBQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQBNgggggggNNNNNNNNNNNNdj|;,'''''''''''''''''',:;r|\\\\\\\\\\\\\\\\\\/\\\|^:,''''''''''',''',^Z#QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQ#NNNNgggNNNNNNNNNNNNRXl;''''''''''''''''','',:r|\\\\\\\\\\\\\\\\\\\\\\\\\\//>;::",,:;^r^;;:,,',;eQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQBNNNNNNggNNNNNNNNNNNRa>,''''''''''''''''''',,;=\\\\\\\\\\\\\\\\\\\\\\\\\\\\ifji\\\|=>|\\\\\\\>:,,',/BQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQBNNNNNNNNNNNNNNNNNNdJ:,'''''''''''''''''''',;?\\\\\\\\\\\\\\\\\\\\\/\\\\\\\cS9el\\\\\\\\\\\\\\\\r:,''r$QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQBNNgggNNNN#NNNNNNNgk^,''''''''''''''''''''':r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\iSKOEz\\\\\\\//\\\\\\\\?;,'':oQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQBNNNgggNNN##NNNNNNdz:'''''''''''''''''''',,;|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\z6OOqyL\\\\\\\\\\\\\\\\\|;,''_]BQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQBNNgNNggNNNNNNNNNNNWo;,'''''''''''''''''''',_=\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\FqKOO9u/\\\\\\\\\\\\\\\\/\^~'',zBQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQBNNNNNgggNNNNNNNNNNgh|,''''''''''''''''''''',:>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\jqKKOO6v\\\\\\\\\\\\\\\\/\\r_,',1BQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQBNNNNNNggggNNNNNNNNN8u:'''''''''''''''''''''',;|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\yKOOOOOkyvi\\\\\\\\\\\\\\\\^_,'',fQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQ#NNNNNNNgNNNNNNNNNNNOi,'''''''''''''''''''''''~r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\uqOOOOOOOKPS7\\\\\\\\\\\\\\|;,''':XQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQ#NNNNNNNNgNN##NNNNNNgZ;'''''''''''''''''''''',,':|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\v6dD8W8HOOdO2/\\\\\\\\\\\\\r:,'''';dQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQ#NBB#NggggNNNNNNNNNNNe;''''''''''''''''''''''',,,^\\\\\\\\|\\\\\\\\\\\\\\\\\\\\\\\/\\\\imdOKdRgDOOOEz\\\\\\\\\\\\|:,''''''1QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQB#BBNNNggggNN#NNNNNNNm;''''''''''''''''''''''',^^;|\/\\\\?;:r\\\\\\\\\\\\\\\\\\\\\\\\\\\/yKOOOORgdOOKf\\\\\\\\\\\\?,'''''''rMQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQBNNNNggggNNNNNNNNNNNE;,'''''''''''''''''''''',;|*|\\\\/ir_,_>\\\\\\\\\\\\\\\\\\\\\\\\\\\\FqOOOODNDOOKu\\\\\\\\\\\\|;"''''''"mQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQNNNNNggggNNNNNNNNNNK|,'''''''''''''''''''''''_*\\\\\\\J\,,,;\\\\\\\\\\\\\\\\\\\\\\\\\\\\/yKOOOOdNROOKj\\\\\\\\\\\\\|;,''''',vQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQNN#NNNgggNNNNNNNNNNN},''''''','''''''''''''',,;\\\\\\\/l:',">\\\\\\\\\\\\\\\\\\\\\\\\\\\\vXOOOOddN8OOKf\\\\\\\\\\\\|\|^:'''''rWQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQNNB#NgggggNNNNNNNgNN6;'''''''::,'''''''''''''',;\\\\\\\\?,,,:|\\\\\\\\\\\\\\\\\\\\\\\\\\\leOdOOOOHNDOdq{\\\\\\\\\\\\\\\\^,'''':hQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQBNBBNgggggNNNNNNNNgNH|''''''',;_''''''''''''''',r\\\\\\\\;,,';\\\\\\\\\\\\\\\\\\\\\\\\\\\leKdOOddODgdOO6v\\\\\\\\\\\\\\\\=:'''',aQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQBNNggggNNNNNNNNNNR7,''''''~cc~''''''''''''''':|\\\\\\\/;,,,;\\\\\\\\\\\\\\\\\\\\\\\\\\vmKOOOdOOORROOOEv\\\\\\\\\\\\\\\\*:''',,vBQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQBNNNNggNNNNNNNggge:''''''_\h2;,'''''''''''',,;|\\\\\\\/^,,,;\\\\\\\\\\\\\\\\\\\\\\\/ifEOOOOOOOOO8DOOOP7\\\\\\\\\\\\\\\\|:,''''LBQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQNNNNNgNNNNNNNNNNH|''''''_>]Zu=:''''''''''''',^\\\\\\\\7;,,,;\\\\\\\\\\\\\\\\\\\i}ZmX9KOOOOOOOdddROOOO6z\\\cf}Jzvli/\\\\\r",,',/BQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQBNNNNgggNNNNNNRPSL;,'''':rijfu|:'''''''''',,'"?\\\\\\\/z:,,,;\\\\\\\\\\\\\\\\\Ly6OdHOOOKKOOOOOddRDOKOOOjL/\z$6$DgdOkvto2j{>",,,1QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQBQQ#NggNNNNNDj;,',:;;,,;7y2}f{\^,'''''''''',,;\\\\\\\/J=,,,,;\\\\\\\\\\\\vujujZO8RDRRDdOKOOOOOOd8HOOOOO2/\\iJ2EOKEZFcPh$8R6yzJ]DQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQBNgWgNNNgmr'':;;:,_;;/HQgH8f\\;,''''''''',:?\\\\\\\Jv:',,,;\\\\\\\\\\\\veKKKOMROOOOD8DdOOOOOddRddOOOOml\\]OH8qafFjtkmhHDdPj7ldQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQ#NgWM8g8}:'';{1\|>;,:\XN#BNj\\|r:,'''',,:^|\\\\\cJjEc",,,:>\\\\LJ7\\\\\\ijqKO8ROOOOOd8ROOOOOdRDOOOOOdKu//lSemE69KEJXEqMDPt]zvOQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQBBNgWMMO|,'':|\zSt\\|;:iDQQdl\\\\\|r^;^>|\\\\\vmka]\r^^>?|\\\\\\fhv/LiLLiiieqOdHOOdOOOODWHOKOHNDOOOOOOOm7\\\\||\\\\\\\Ll7r,:r}NQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQNgWgggj,'',r\1yzjj/\\>:^tqO7\||\\\\\\\\\\\\\\7]17i\\\\//\\\\\\\leZ{{jePk9qKKKOddddOOOOd8WdddDNDdddOOOOquL\\\\\\\\\\\\\\=:,,_;dQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQNWgWggWl,',;\Fjc\\}yl\\|;,;|^?\\\\\\\\\\\\\\\\\\\\\\\\\//\\\\\\\\\zoo{7zyXqOKKOOOOOKKOOOdgRODMgdOdOOOKOO6eaZao2fv/\\\\\|;,,:|vNQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQ#NgWgggNM/,':?yj\\\\\vyv\/|;,'':^\\\\\\\\\\\\\\\\cujFzvliii7vc\\??\\LcvoXSzi1ek9KOOOOOOOOOODg8WNWOOOOOKKKOOOOOKOOqe1\\\\\>",,~>eQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQNNgggggNNNW7,,^jj\\\/\\\12L\\?:'',:r\\\\\\\\\\\ivJFj2amkKDRRX?:'-``````-':;rvFfzicta6KOOOOOKKHBBDMROOOOOKKKKdd9$mou1i\\\\\/|:,,,rdQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+BNggggggNNNNNNZ::iji\}F}f]i]el\\?:''',:|\\\\\\i117L||||||/L/L1eP]|:-``````,f9Z:``-:>z/\iz{uaXk$6XDDmq8HKkXE9q6j2E1c/\\\\\\\\\\\^,,,:mQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+ggggggggNNNNNNe;^}J/fl\||/F27\\\>_'''',;|\\|/7|;~,,'',,,:>\\\\\vouvi?;,-``-=z\'`````:j1\\\||\\Lcuez/i2qJL\/cvvfetvt{}{t}Ffui\\\|:,',*gQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+WWgggggNNNNN#BX;=utju\\\/jz\\\|\|;,''''':>>;r:'''''',:;r|\\\\\\\/uol\/c7L|?|\\///\?\lv]uykDdqKDgDXoSSmy\\\\\Lyd6myziiicc/\\\\\|^:,,,,iNQQQQQQQQQQQQQQWgQQQQQQQQQQQQQ
+WWWWggNNNNN###X;>uja1\\/uf\|\\\\\?:'''''',,''''''',:r|\\\\\\\\\\\\//\\\\\\\\\}XKdDDHOkmeXqR#NNNNNNgNNNHj11zvv\;"'''-`-'_>v\\|*:,,,',',yQQQQQQQQQQQQN2//eQQQQQQQQQQQQ
+MWgWgNNNNNN#NNP;;zjju\\val\\\\\\\?:''''''''''''',:r||\\\\\\\\\\\\\\\\\\\\\\\tqMggMRRRHOOOOKqk9DDdKKKqKODDF,-````;e$u,````:{|^:,''''',|DQQQQQQQQQQBH{\//i6QQQQQQQQQQQ
+MMggNNNNN##NgNm:_?f{1\\J2/\\\|\\|?:'''''''''''',:|\\\\\\\\\\\\\\\\\\\\\\/c1SK8DdOOKKKKKKOqji\/1mKOKKqKOK8d|~.```:zy/'````:mJ;::,,',;yNQQQQQQQQQQdo{\/ii/tgQQQQQQQQQQ
+WWgNNNN#BBB#NNo",;/FF\\lov\\\\\|||:'''''''''''',>\\\\\\\\\\\\\\\\\\iv1uoEORRDOOOKOOOOOOKP{/\\\\t$OOPf}eOgg9u7\=;:'--`-,;/uXXFL=>\1ENQQQQQQQQQQQNzfi\L/c7lhQQQQQQQQQK
+WgNNNN#BB#NNNNu,,:*\voSczev\\\\\\|^,'''''''''',;|\\\\\\\\\\/z]j2Zm6qOdRMRDdKq66qEehqPaut/\\\\\\lXOmv\\\qQNHd6uvvcc7777cl}2jyv::o#QQQQQQQQQQQQQQutJ\\/ivvcyQQQQQQQ#o\
+WN#####BNNNNDe7,':\u2jaej]eul\\v/||;,''''''''',r\\\\\\\\\\\{kKKKODRDDDdOqkeutSov\|\\\\|\\\\\||\/oEz\\\/DQQQOuv1FuoSJL\\z}L^_",|NQQQQQQQQQQQQQQWvjc\Lcvvvl1gQQQQQ#j||
+N#BBB#NNNgWqi;/"'r>;|\|\tZFFam7ja/\|;,'''''''',>\\\\\\\\\\/uqKKKKKKKKKhati/1Xj/\\\\\\\\\\\\\\\\]qei\\\/DQQQBe/\|\\\\\\\\\=:,,,]QQQQQQQQQQQQQQNKvjLL7vv1v]oRQQQQNu\//
+#B#NNgNgdj^,''rr',,,:;^?\iaF]$7\Jajo\:,''''''',=\\\\\\\\\\\t6KKKqqqkoz/\\7juaficvtFjoaZS]c\\\\\/L\\\\\ieSBQQQDz\\\\\\\\\|;,'':XQQQQQQQQQQQQQme6zu/lvtfc|/fOQQQDz///v
+WNNgggRj;,''''"|;''''',:>\i1}kl\|1aomF;''''''',=\\\\\\\\\\\iZqKqq6yl\\\cjji\/]EKOdR#B#gRDKXjl\\\|\\\\\iZ{gQQQQo\\\\\\\\\r,''':qQQQQQQQQQQQQDle61ji71yv\\ivvZ#Hv\LL/t
+HgggNO\,''''''',*;,'''',;|\\t6v||\}oeDa^,'''''~=\\\\\\\\\\\/oqKq$2/\\/J2v\\\\\LvfaKN#NWMMRDDOev\|\\\\\/Xa#QQQN}\\\\\\\\\;,''';dQQQQQQQQQQQQy\e6JSczSz\/ivzvluez\//Lj
+9gggK='''''''''',r^,'''',^\7at\\|\\FoXDhi:,'''_*\\\\\\\\\\\7mqKqX1\\\/v\\\\\\\\\|\/vfe9KKKdDdOOm1\\\/}EEmNQQQ#F\\/\\\\\?:''''rMQQQQQQQQQQQOL\j$uXJa{/\/icvzv7ze{\\vf
+mgWK|'''''''''''',>/:'''':\a{?rrr>|\JSHWm;,''':?\\\\\\\\\\\f$KqX1\\\\\\\\\\\\\\\\\\\\/zyPqOOOdOddEy]]]z\/XQQQQm/\\\\\\|;,''',zBQQQQQQQQQQQS\/zZu$6j/////ivzzvi2S\\]{
+}gd\,'''''''''',:r|L1r"'',/1;,,',,";>\oMk>~''',r\\\\\\\\\\imKKmv\\\\\\\\\\\\\\\\\\\\\\\\z6aj}v/\\\\\||\\\jQQQQQPi\\\\?;,',,,>DQQQQQQQQQQQgz/LivleXi/iL\\/vzvvvof7vjz
+\6v,''''''''',:r|||\\zz\^^z;,,'''''',~;/z\^_',,;|\||\\\\\\J6q6v\\\\\\||\\\\\\\\\\\\\\\\\c2L\\\\\\\\\\\\\\uBQQQQQqv\\\^:,,',*HQQQQMqNQQQQQOi/icl7at\LiL\\/vzvvS96uvvz
+r|,'''''''''_r\\\|\\\\\\\1i,'''''''''''',;^;,',,^|\\\|\\\\yOPt\\\\\\\\\\\\\\\\\||||||||\\\\\\\|\\\\||\\\\fBQQQQQBj\\*;,,,,/NQQQQDF\2$NQQQP/ill7{j//iiL\/L7vveO8Xlv}e
+^*''''''''',^\|\\\\\\\\\/l;,,,''''''''''''','',,:r\\\||\\]Pev\\\\\\\\\\\\\\\\/i7v1ttt{{}{zcLzffj}v7i/\\\\uBQQQQ#e/\>:,,,_tNQQQQKFfzjiFDQQa\\icvov\LiLL//LizoePOOuFSu
+;|,''''''''">\\\\\\\||\\c1:',,'''''''''''''''','':|\\\|iuJ/\\\\\\\\\\\\/lJ]]{Jzv/\\\\||\/iv{}{tFee2Kqu/\\yQQQQBa\\|;,:{aKQQQQQN}ij2eoz1$NS|\cvfa//LLLLiiLivFea68ht7l
+;\:'''''''':?\||\\\\|||\vi,''''''''''''''''''''',;|\\\cvL|||}e1vvvvvv11{}FJ1L\\\\\\\\||||||\\\iujoqEeEu\\oQQQQqL\\=:;ZBQQQQQQQDi\u$kye}ioaL\i7au\//LLLiL/Lv}johKFlcl
+:\:'''''''':|||\\\\\\\\\zr''''''''''''''''''''',:|\\\tF/|||\ctaZov|||*r^^;;;:::::::::;;r|\\\|*^~'~^vtum//XQQQN{\\/\=e8OQQQQQQQK/\vOXFm1LiFozizmz\/LL//\vu{FaFoqeeJc7
+:|:''''''',;||\\\\\\\\\\v:'''''''''''''''''''',,^|\\vu/|||\\\\\/z7?;,-`                 ``-``      `:h9//EQQQP/\\/\?fziNQQQQQQk//\ZqhZ/\cv]efua\\LL/\/za2v7uXmjveFlv
+:|:''''''',^||\\\\\\\\\Li,'''''''''''''''''''',:?|\\v}\\||\\\\\\\|\/lzi;,',:-                   '` .v6v|idQQMv\\\\|:,,|NQQQQQQZ\//lKOz\/ivv1m9{\////i}uaJccluo7lSfcf
+~ryzr,''',,^\||\|\\\\||i/,'''''''''''''''''''',;|\\||1{\\\\\\\/ici\\\\\\c\^:,'-``    ``';,``---:|\y]i\\\JgQQm\\\\\|;,,L#QQQQQQo\Li\}y//iL7zvzZu////7j1yj7vvv7ojiyjzZ
+,:Seaf^,:^^|\\\\|\\\\||c\,''''''''''''''';;,'',^\\\\|\c/\\\\\\\/\\\\|\\\\\\iL\|?>r^^>>>*|\/L>;;?lc/\LvL/aQNei|\\\\?:,,uQQQQQQQm/LL\/2t/iivzvzyXS//iytzozc7vvc{ezSu2o
+,_FejyZ7|\\\\\\\\\\\\\\la;'''''''''''''''*;''',^\\\\\\\\\\\\\\\\\/}jz/\\\\\\\\\\\\\\\||||vmhZi\\i7f1]ei\}Zz\|\\\\\^,,,aQQQQQQQOi/iL/vav/LvvzhhteFljjl}27lvzv7veyofZz
+,"tkojoPJ\\\\\\\\\\\\\\lDqr,'''''''''''',=,''',r\\\\\\\\\\\\\\\\\\LzSeey1L\\\\\\\\\\\\\\\iv77/\\\\\zoz\|\\\\\\\\\|;,,:6QQQQQQQ8v/ici/t2//c1k6t7zXZZz7ou77vzvvl2XyjaL
+,,vROEaX{\\\\\\\\\\\\\\7DQD|,''''''''''''=,''',^\\\\\\\\\\\\\\\\\\\\\iteq6maS2yy22oooemEkk$6hPXeemkmz\\\|\\\\\\\\*:,,;DQQQQQQQBF\iliL/Sj\z66J777jOjiza1c7vzvvljh1u}/
+,,|KqKD6v\\\\\\\\\\\\\\zRQQNt:''''''''''';;:,',;|\\\\\\\\\\\\\\\\\\\\\\i}aXk$qqq9$kEPmeeeemmXPEhEmjv/\\\\\\\\\\\|;,,,|NQQQQQQQQe\/cli/cZjm9}7vvvtX1ito7c7vzzvl]evvcL
+,,rEKqq9J\\\\\\\\\\\\\\tNQQQNj^,'''''''''',:r^,:|\\\\\\\\\\\\\\\\\\\\\\\\LvtujjfJvvJ{fjoooyutzvvvi\\\\\\\\\\\\\\|:,,,FQQQQQQQQQOi\iccL\vq$]lz1ayyovcjo7lvvzzvv]ZvvlL
+,,;oFmK9$}\\\\\\\\\\\\\JgQQQR1Jc:''''''''''',|^:>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lzjmdd969d8NgN#de}/\\\\\\\\\\\\\\\?:,':mQQQQQDeueOF\Liii//fet]J1XX$j7v2jlvvvz1zv}avvvc
+:~^ZJ7Z8WKz\\\\\\\\\\\\zRQQQOi\/L|;,''''''''',,,;\\\\\\\\\\\\\\\\\\\\\\\\\\\cSo]yh##N8NgdWRNNu\\\\\\\\\\\\\\\\\\r,',|mj1i|r;^r^|oi\///cvvaj/\vSj$z7vZ}77vvz1vvuaccz2
+;_rZz7vmDDXc\\\\\\\\\\\/ZQQQ$/\\\/lv\^_''''''''':|\\\\\\\\\\\\\\\\\\\\\\\\\\il\\/ZQQQ#NRdMdN$/\\\\\\\\\/\\\\\\\?;',ro;''''''''''=}//c7vzFv\\\12o6viveJcvvvzzv7SSzoe}
+\:^Ztliz6K9ai\\\\\\\\\\\lOQQP\\\\\\\/7v/>"'''''',^\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\zBQQQBBB#N#j\\\\\\\\\\\\\\\\\*;,,;rc;'''''''''',\}vvv1{c\\\/2hePjivmJcvzz11vvXKEuvl
+i^;a{lcc}69$eujyf}c\\\\\\]gQKi\\\\\\\\\\vz/^~''',:r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/DQQB##QNNdl\\\\\\\\\\\\\\\|^_,_;:,\>'''''''''',:7{vf}i\ii\i9DmKel1Xzlv1zzzvF6Svc7v
+7??e1ll7coDd9e1cct2v\\\\\\uNBS\\\\\\\\\\\\/vt/;~,,~;?\\\\\\\\\\\\\\\\\\\\\\\\\\\\\eBQBNg#N#e|\\\\\\\\\\\\\\r:,:^;,''*l,,,"::,,,,,,;2Pt//Lii\]Rd6aev}Xz7z11zv7eai7vvv
+v\vezclvfXkjvclciiFj\|\\\\\yN8t\\\\\\\\\\\\\\Lz1ir",_^|\\\\\\\\\\\\\\\\\\\\\\\\\\\i16NXXXomv|\\\\\\\\\\\\*;,:vJ:''''^o*=?||||?=r;;^FJ\\/ii//mRqEmezFXzvzzzzlfEoezvvv
+vvy2vz2mZ}v7l7lcvzjX]\\\\\\\oNHz\\\\\\\\\\\\\\\\i11/>>/vi\\lJF]zi\\\\\\\\\\\\\\\\\\vNQBQ#eJFjuzL\/vtzL\/\|\fKu:,;;:,^mL\\\\\\\\\\Jfi\\Lici/zdKkPXOfv1vvvvvvFqOMPvvvv
+77zfemjzvvvvv1f2y}zv{Sl\\\\\\2gOv\\\\\\\\\\\\\\\\\\yKa\LDovEhvakei/c7liL/i77iil7c/LPQ\2@QWJuXui66E$|aKaj7eP1tP/h}|X=?e/\\\\\\\\\}]\\Licllii6BdXm1myivvvzvvoWQQW{cvvv
+7{XqXyujjoeeoSuzlcv7lFav\\\\\/282/\\\\\\/\\\\\\\\\\vMm>;\QhkQ;@g$qmjooeZOeyj$dyueKO6kEQQQmF@@@^|QQ}:RuecD@@q,aKM;7O;=a\\\\\\\\/fyi\Liciii/iONqoziooc7vvvvzXDD#qvil7v
+lJ2S2SjSXK9SJvv7}yuzlj9Xjc\\\|/PEL\\\\\\\\\\\\\\\\/fBrDD:vQQei@@M>1B@a,q#Qu,iE#7"NQ@*^@Q8gQ@Rv\DQQ^yH{d@@QP?JdqE:d/,=j\|\\\\\/uj\\Liiii//\yM9f7vcje7vvvzvJZXdNmFjS2o
+777lvtoEmuvvvzzuddKHqa{v]Syz/\\]6v\\\\\\\\\\\\\\\\i66>QNP_f@rd@N:t@Q@?>@Q@?^Q@@=|@Qg~a@QWB9|ONQQQM^QBQQ@7JhqZJdvFh:,?{||\\\//}o/\\/////\\chev7vzcfPvvvvzzvv2Khjf}z7c
+7vvvFkKPaooaeeee$d6KdJv7c7{2SfvceS\\\\\\\\\\\\\\\/}Q/eH}Ra"|*QNo,D@@S,e@@D,P@@d,h@@f:Q@BNQ6N@ROQ@DW@QQQQSWu\/2NmD/,,/t\\\\\/Ja7//iiiici/\}yc7vzzc]XvvvvvvlvXOtcvvvvv
+77v7vvvvvvvvvlciveKkKXz7llllv}yaX2/\\\\\\\\\\\\\LSZu:Shttg},eOXK;\ea2,LhQv;QQ@q"vh@]:oOQQa,e@8D@6,y@QQ@r:DF\vR|:O7~_}1\\\\\1ev\Liicccci\\c7l7vvvc]Xvvvvvvc7ZZvvvvvvv
+7777777777lciiclcveKEOXvcccclllvfoofv\\\\\\\\\\\/FaE6Xov/zeoZvLjEXXPXXqQ@QQQQQQRQ@Q@WNQQgqNQQD8Q@Q@@@@@#Eoi\/jeea\:;2l\\\\/a{\\LiL/LL/\vjzvvvvvvijal7vvvvcuezl7vv7vv
+                                                                                                ???????     
+                                                                                              ??:::::::??   
+NNNNNNNN        NNNNNNNN               AAA               NNNNNNNN        NNNNNNNNIIIIIIIIII ??:::::::::::?  
+N:::::::N       N::::::N              A:::A              N:::::::N       N::::::NI::::::::I?:::::????:::::? 
+N::::::::N      N::::::N             A:::::A             N::::::::N      N::::::NI::::::::I?::::?    ?::::? 
+N:::::::::N     N::::::N            A:::::::A            N:::::::::N     N::::::NII::::::II?::::?     ?::::?
+N::::::::::N    N::::::N           A:::::::::A           N::::::::::N    N::::::N  I::::I  ??????     ?::::?
+N:::::::::::N   N::::::N          A:::::A:::::A          N:::::::::::N   N::::::N  I::::I            ?::::? 
+N:::::::N::::N  N::::::N         A:::::A A:::::A         N:::::::N::::N  N::::::N  I::::I           ?::::?  
+N::::::N N::::N N::::::N        A:::::A   A:::::A        N::::::N N::::N N::::::N  I::::I          ?::::?   
+N::::::N  N::::N:::::::N       A:::::A     A:::::A       N::::::N  N::::N:::::::N  I::::I         ?::::?    
+N::::::N   N:::::::::::N      A:::::AAAAAAAAA:::::A      N::::::N   N:::::::::::N  I::::I        ?::::?     
+N::::::N    N::::::::::N     A:::::::::::::::::::::A     N::::::N    N::::::::::N  I::::I        ?::::?     
+N::::::N     N:::::::::N    A:::::AAAAAAAAAAAAA:::::A    N::::::N     N:::::::::N  I::::I        ??::??     
+N::::::N      N::::::::N   A:::::A             A:::::A   N::::::N      N::::::::NII::::::II       ????      
+N::::::N       N:::::::N  A:::::A               A:::::A  N::::::N       N:::::::NI::::::::I                 
+N::::::N        N::::::N A:::::A                 A:::::A N::::::N        N::::::NI::::::::I       ???       
+NNNNNNNN         NNNNNNNAAAAAAA                   AAAAAAANNNNNNNN         NNNNNNNIIIIIIIIII      ??:??      
+                                                                                                  ???       
+EOF
+sleep 1.8
+clear
+cat << "EOF"
+QH96$$6$66$$$$9$999999$$$$6$66$9KqdRQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QQB#|^P\:^hzj#Q@QQQQQQQQ#NNN#QQQ#NHo\\\\\|?*>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr=||LtFujw#
+$66666666666666666666666666666666$dQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q@@@QQ7>ED6>=ml^;>u7vD#QQQBB#NMM8WgNNNNN&OZi///iL/\|=rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr>|v}FFuy
+66666666666666666666666666666666666N@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QPkQQQ@#>L#QQOr_?Phrr]7rrr^>^^ogD9MDOdHD8WWWWWMRDKevvvcc7i\|?rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr>*|/l1]F]]Ff
+66666666666666666666666666666666666H@@@@@@@@@@@@@@@@@@@@@@@@Q9EQQQX\j#QBN\_zWNK\^^\y>r>>^>/zuZXEddeo6669ODDDDDDHHK9wzvvcLL/\|*rrrrrrrrrrrrrrrrrrrrrr>=???|\/ilvvz1t{]]}{
+66666666666666666666666666666666666qQ@@@@@@@@@@@@@@@@@@@Q#DHMS=fDNRZ|iPRg6|;\Z9urr^rr>?/]e66666666627]m6$9q99q99q666atu{vz1z7\*=>rrrrrrrrrrrrrrrr>*|\/Liccl7vvvzzzzz1zzz
+666666666666666666666666666666666666N@@@@@@@@@@@@@@@@@@@QgkX$StuoKHOev|\L]Z/rr|/>=voZXh6666666Xoomeea\|e666666666666hSF]vL\\|*>rrrrrrrrrrrrrrrr>>?|\/L/cllcl7vvvvvvvvv77
+666666666666666666666666666666666666R@@@@@@@@@@@@@@@@@@@QWoa9O8NNHq9ODka]uXac|/||S6$$6666k6666mameJ/\\/j666666666666kavc|*>rrrrrrrrrrrrrrrrrrrr>*?|\\\/icciiiiL/ii/////\
+666666666666666666666666666666666666qQ@@@@@@@@@@@@@@@@@QQNgDq6$dO966$KK9666e]z}ccek6666666kPhk6kkkXeZZaamk66666666666j\|>rrrrrrrrrrrrrrrrrrrrrrr=?|\\\\/////L//\/\|\\\\\
+66666666666666666666666666666666666kkN@@@@@@@@@@@@QQQ#NggWggH666666666666k6Pjoy//7okk6k6kev;;?ze66kPejtc\]6k6$99KKqK$j*>rrrrrrrrrrrrrrrrrrrrrrr>*|/cclvvv777v7lcvvlccccl
+66666666666666666666666666666666666kkD@@@@@@@QQ@@@QBgdqqq99q9666k6666666666kejuuSX66k66w]|:-'?uEkeuzi\?*r|e$99KKdMdDq2?>rrrrrrrrrrrrrrrrrrrrrrr?\Lvzvvv1{}{]FF]tzzzzzzzv
+666666666666666666666666666666666666P6N@QQQQQQB##NMHK96e]jek66666eoPPE6666666666666kXwXwPhkSoEat]]zv/|>rr>SKKdRMddRDOX/=rrrrrrrrrrrrrrrrrrrrrrr>?|\7vJFf]fffuf]}]]}}t1zz
+666666666666666666666666666666666k6666$D##BB#NN&KKq6666kjjaekPmj7;,;1ekk666666ky{zl/\\\iiLtm]zju1lv{}Jc|rrt69KKZ^r9gDm\>rrrrrrrrrrrrrrrrrrrrrrrrr>?\//cvz11ttJz1t}]{11J1
+6666666666666666666666666666666666666666ORWRdOOq666k6666kk6kkXmmemZE66666kh666hv=>rr>>*?\iFSzlzv/|>rrrrrrrl$9PFu\rEgHe*rrrrrrrrrrrrrrrrrrrrrrrrrrrr>??|\iccvzvzvvvvvv7vv
+66666666666666666666666kk666666666666k6ke6666666PjfSP6666kE66k666666666o1]{e666S*r*>rrrr>|7l/|\\\|>rrrrrrrLqOy=\LrFdK]rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr>>*?|||||\\||\
+6666666666666666666666PZP666666666666kkkwk66666kkPE66666e]zo66666666kmjvicLS666Z?>\|rrrrr=\\||??|?rrrrrrrr\Ogd}1\^vDqirrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr>rrrrrrr
+6666666666666666666666Xj]yakk6ee6666666666666$66$$6k6666ev77uek6666XF7l7c/\jqDDEi|>rrrrrrrr>=**>=*rrrrrrr^rZgz^\r^Fda>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+66666666666666kk66kk66mtv]ok6khk66666kkk6h6dRWDHHHOdDHq6kuii\\F6666u|///|||SR#NHZuc||>rrrrrrrr>*>rrrrrrrrr>mDuc|^Ldh\rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+66666kkPPEk6hwmE666666kZf2h66666kPPkmSyaPjEON##NN#N##NRO9Z//\|i666kv\\|||?|jH#RXS2SPe2crrrrrrrrrrrrrrrrrrrrZ2t/^iD&Frrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+wwXXZuaoaawkkk66khXweeeeufmPEPXwEhkkXayj2ye9gQQQQ@@QQQQNR6v||||P66PL?|????>ldgKoz}{\|?*rrrrrrrrrrrrrrrrrrrrJ=;;|qB&7rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+oaZeeeeeeeeeaoSyjjyjjujjjfjjoooSooemeaSuuyuZKQ@@@@@@@@QQQ&o|||?S6$6v>=***>>zDNe*>voL>rrrrrrrrrrrrrrrrrrrrr^r;:|OQQE>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+jjjuufFF]}]]FFFFFFfujjuuuujjjyoZaZemmeeSuuuyZOQ@@@@@@@@@@Qdz**?7kK9j?**>>r|kB#9L*?Lv>rrrrrrrrrrrrrrrrrrrrr>ivJRQQ#e>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+zz1{{tJJJJ}]}}}}}]]FFFfuuujjy2SSSSooaaaeojjjuyOQ@@@@@@@@@@Q6\>*?{KDqi>=>>|ZN#DS|\7z\|\7vvtv?rrrrrrrrrrrrrrrr;:FQQQP>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+vvzzzz1Jt{{{}}]]]]]FFffuujjjjySSy22SSSSooS2oj{SD@@@@@@@@@@@Qa|=>\mg#m|>=r79dSLvoet\>^;:_,:;?|rrrrrrrrrrrrrrr^;*gQB$?rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+vvvvvvzzJtJJ}]FF]]Fffuuujjjjjj2Syyy2222ooSoojy]oQ@@@@@@@@@@@QZ|*?L9BNS?*>>|\\oSc*r^r?zSee69e\rrrrrrrrrrrrr>rrrrFQQd|rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+i7vvvvzz1tt{]]FFFfuuujuuuujjjjjjjjyyyyySSo2oyjtuN@@@@@@@@@@@@BZ?=>\j8&e|=*=>??>r7eO#Q@@QQQK7rrrrrrrrrrrr^i|rrrr|DQ&irrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+Lclll7vzJ{}]]]]FFFFFuuuuuuuuuujjjjjyyyy2SoSSjyfuM@@@@@@@@@@@@@Q]=>rr\odXi=?>r>>r?voDQ@QQhz?rrrrrrrrrrrrr>S?rrr^^mBRvrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+Lc777vzJ{}}]]]]FFFFFuuuuuuuuuuujjjyyyyy2y2ojuSayq@@@@@@@@@@@@@@Qj*r>>>L26aL>r>rr>=lHQD]*rrrrrrrrrrrrrr^r}vrrrr^^zBNFrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+Llvvvz11Jt{}]]]]]]FFFFFFffFfuuujjjjjjjjjj22jjuuFP@@@@@@@@@@@@@@@Q$irr>>>|vo}=r>rr/6BP?^^rrrrrrrrrrrrrr^\X?rrrrrr|WQk*^^>?|||\//\?rrr^rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+7vzz1JJJJ1Jt{}}}}}]]]FFFffffuuujjjjjS2SSS22yjujfh@@@@@@@@@@@@@@@@@QZ|>>*>>>=>rr>>JDM*^rrrrrrrrrrrrrrr^^Xo>>rrrrr>H@@QQQQ@@@@@@@@@QR9XZyFtc|r^^^rrrrrrrrrr^^^^^r?/tjju/rr
+vvvzzzzz11JJt{{t{}}}]Fffuuuujjy2S2yyyjjuuufF]t]{X@@@@@@@@@@@@@@@@@@@NF*rr>>>*>>>r\6$rrrrrrrrrrrrrrrr^;zKi=rrrrrr^P@@@@@@@@@@@@@@@@@@@@@@@@@QM9PhqOOOOKq6k$KHWQQ@@@@@Qh*r
+77vvvvvvz111Jt{{]]]FujuuujjySSyyuF]{J1zzzzzzvzv7yQ@@@@@@@@@@@@@@@@@@@@R{>r>>*>>>rrJerrrrrrrrrrrrrrr^;zDjLy*rrrrr^f@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qu*rr
+l7777v7vvzz1JJt}]FFFjyjuuuuufF{1zzvvvvvvvvvvv1vcFQ@@@@@@@@@@@@@@@@@@@@@@d7r>>>>>=rrv7>rrrrrrrr^rr^;_|#Boaz>rrrrr^L@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@P?rrrr
+Liccll777vzzzz1J{}}]ujuf]t1zvv7vvvv777l77vvvvv7v7K@@@@@@@@@@@@@@@@@@@@@@@@Nj?r>>>>>r*>r^;;;;;:",'_vRQX\>F|rrrrrr^\Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@K\^^rrrr
+\/Liicll77vvzzz111zzzzzzv777lccl7777lll7vvvvvvlL/cO@@@@@@@@@@@@@@@@@@@@@@@@@#S\>rr>>rr^\yPO&DqhE9B@Qz^^cu>rrrrrr^|Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qor^rrrrrr
+\\//Lcccl7vvvzzzzzvvvvv7lcccccicccccccc77lcciLlcL/e@@@@@@@@@@@@@@@@@@@@@@@@@@@QDeF1j9NQ@@@@BHX2FZQQ}^^|oirrrrrrr^\Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$|rrrrrrrrr
+\\\/Licccll7777777llciiiiiiiiiiiiiiiiiccccciici//$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8}|rrr=oQK^;^\crrrrrrrr^LQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@BS;,;^rrrrrrrr
+|||\/LL/LLiiLL/L/////////LLL/////LiiLicLLLi///\/q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q}r^^;^tQQu;;cz>rrrrrrrr^\Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qt?>;::::;^^^^r
+?|||||||\\\\\\\\\\\\\\\\\\\\\\\\\\\\/\\\\\\|||LK@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QMHRSr:|ZN@@O>:\Ko=rrrrrrr^;}KP@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#Koi;:,',
+=>>>>>>>>===*??|||\\|||||||||||||||||?****=>>iN@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@hJ}jymL:''~?PQ@@@@Qz;:FBu>rrrrrrr^^qHLQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QB
+rrrrrrrrrrrrr>>>===**************===>r>rrrrrv#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#7rrrrrifr_::,|d@@@g|;;FQa>rrrrrrr^;}NFk@@@@@QOXZ6#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrzK@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@E?rrrrrrzhL;rr^rzQ@o^^^7#q|rrrrrrrrr^\\?aQ@Qd\rrrrr\}ShNQQBQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrvd@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q#@@@@H|^rrrrr>r\mcrrr^^}h*;^^iQ#vrrrrrrrrrrrrr>|zS{/vvzzzzJvz7?:''e@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr>aQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@l-`^Q@#/^^rrrrrrrr**rrrrrr^^^r^/#Q6\rrrrrrrrrr=*|/\?>>rrrrr^^r?=r^^?N@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+r>>rrrrrrrrrrrr^^^rrrrrrrrrrrrrrrr^^\H@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@q;'-|QXrr^^rrrrrrrrrr^^>;;^^^;:zQ@Btrrrr^rrrrrrr^rrrrr^;^r>^?2j|rrr\B@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+cvzFSemeeeZouF{vlL\\||||>;^^r^;;;\oW@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q]::Xh7/|\?rrrrrrrr>;:vw\;~,:zB@@@Q7^^*vLrrrrrrr^rr*i7|oe$PjFv/i\*rvQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@QQND9kKM@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Kr;^^rrrrrrrrrrr?zjD@@QQQ@@@@QRNQNPf|rrrr^;>/vvz2Ez^{|\K@#L/uc?rr/q@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qz,~^rrrrrrr>**??=r?l7\|i]aEo|;;r^;;;r^\z]{c|r^;":|K{~-,uQKzF>rrrrrLD@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qj^*||*?||\\||\]ev|??*?*rrrrr|^^^^^>|LL|^^r^r^;;votvv?;?PZc\>rrrrrrr1R@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@KzLi|=rr^*\vzvcv|iv>rrrrrr>i>rr=*>rrr>7\rrrrrr^;^;^r*=\crrrrrrrrrrr>1g@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qz,,:;L1\LdQ@@@QDL>r>|\|?>>\>rrrrr>\//\rrrrrrrr^rrrrr^>Ll=^^rrrrrrrrr>]@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@X:_^iKOiez;_>H@6|iL>rrr^^rrrrr|2mF*rrrrrrrrrrrrrrrrrrrL]z=rrr^rrrrrrr]Q@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O;',:Q^''-''^Wq1]L>rr?/|\F{?*vir^^rrrrrrrrrrrrrrrrrrrr^*\|=rrrrrrrrrrS@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@N^`-;Sqv:;;;]v>r^^rrrrrr=\??rrrrrrrrrrrrrrrrrrrrrrrrrrrr=\/*rrrrrrrr=d@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@QQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@B>``/qjci\||*rrrrrrrrrrrr>/*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr>>rrrrrrrr*D@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@M^';r^^^rrrrrrrrrrrrrrrrr?\rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrcQ@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@X':^rrrrrrrrrrrrrrrrrrrrr\|rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr^rrrr^rrr*>t@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q^~^^rrrrrrrrrrrrrrrrrrrr|\rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr|?>*r^;|?rr=d@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@j:";rrrrrrrrrrrrrrrrrrrrrrrrrrrr*Lc*rrrrrrrrrrrrrrrrrr^^\t/|9WPz*r?rvQ@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q#HhX]vvtz/^::;;^^rrrrrrrrrrrrrrrrLoeul>rrrrrrrrrrrrrrrrrr|v/]/,;qQZ*r|>*8@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@NJ;'.,~:;;;^*rz$e\^:,:;;;^?7au\>>=*L1z\^^^rrrrrrrrrrrrrrrrrr>=*|**;,/QP|rrr*D@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#u>;;;;^^^^^^;,'->Q@@N6uzvztir|oHkSZ\>rrrrrrrrrrrrrrrrrrrrrrrr^;:;r;":tHtrrrr>g@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@MLrrrrrrrrrr^:,'';v#QW$a}l7zzv}o7|jQQFrrrrrrrrrrrrrrrrrrrr^rr^^:r1S$kuLLuz>rrr\Q@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qzrrrrrrrrrrrr/i/1c*;_:'',,"_:::;;;|yNg/^^rrrrrrrrrrrrrrrrrrrr^;vMKt||\|rrrrrrrj@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@D?rrrrrrrrrrr^r^^^^^^^r^^^rrrrrrrr^;;idK?^^^rrrrrrrrrrrrrrrrr^=zZv>rrrrrrrrrrr*O@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q@@@@@@@@@@@@@@@QS>rrrrr?ewrrrrrrrrrrr^^rrrrrrrr^rr;;::?///^:;rrrrrrrrrrrrrr>zqj|rrrrrrrrrrrrr7Q@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8?'',:^y#@@@@@@@@@@@QP|rrr\9@R^7crrrrrrrr^^^rrrrrrr^r^^^^;;:,?jyF{v/rrrrrrrrr>/2m/rr>>>rrrrrrr>/y#@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#7~'";::~',\ueqNQ@@@@@@@#j>rq@@#jdzrrrrrrrrrrrrrrr^^^;;^^r^^^^:~,_:^\v]]/>rrrr|yq2?rrr>rrr^^>\1h#@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q@@@@@8^,::;rrrr^;^rr^;>tkg@@@@@@QQ@@@@@Qurrrrrrrrrrrrr^::?/lv\>rr^rr^^^^^^^;;*vuz\vjDDu]ujjyamP66HQ@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@z;^^^rrrrrr^rrrrrrr^^lN@@@@@@@@@@@@@Ou7?^^rrrrrr=v6Q@@#1?rrrrrrrrrrrrr^^;::^vqQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q|;^rrrrrrrrrrrrrrrrrrr|q@@@@@@@@@@@@@@@#a\>=*\veQ@@@QP|rrrrrrrrrrrrrrrrrr^;:,,:*{KQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q\;;^^^rrrrrrrrrrrrrrrr^r6@@@@@@@@@@@@@@@@@QQQ@@@@@@@6>rrrrrrrrrrrrrrrrrr=|??>=>;:'':Leg@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@M^,::^rrrrrrrrrrrrrrrr;:?Q@@@@@@@@@@@@@@@@@@@@@@@@@@B]rrrrrrrrrrr*|>r*r>?>;^;;^r\L\\/\c9NQ@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&r',:;^^rrrrrrrrrrrrr;',X@@@@@@@@@@@@@@@@@@@@@@@@@@@gt?r^rr>/FkO9F>r>r^^\li/\|*=r;;;;;__':|eQ@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Qc.,;:;^rrrrrrrrrrrrr;;*N@@@@@@@@@@@@@@@@@@@@@@@@@@@@#P1F9#@@@Qjr^>vjj\*>^^^^rrrrrrrrrr;:,'';J#@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@Qa|;;;|y8@@@@@@@@@@@@@@@@@@@@@w:'~;^^rrrrrrrrrrrrr;_:o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@KeZmv>rrrrrrrrrrrrrrrrr^;;^^;~.`-;FD@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@Qv,``'','..~{Q@@@@@@@@@@@@@@@@@@@N2L;_;^rrrrrrrrrrrrr;''/Q@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@D\rrrrrrrrrrrrrrrrrr^^^^^^^>^;;^;;|N@@@@@@@@@@@@@@
+$#Q@@@@@@@@@@@@@@@@@@@@Qr,,:;^^^^;,'^g@@@@@@@@@@@@@@@@@@@@@&;:;^rrrrrrrrrrrr^;,.;8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8\rrrrrrrrrrrrrrr^r^^*\|\\*rr;;:,~,>N@@@@@@@@@@@@@
+'':\Q@@@@@@@@@@@@@@@@@@@]:_;^rrrrr^;'~6@@@@@@@@@@@@@@@@@@@@@8?:^rrrrrrrrrrrrr^^;':d@@@vroN@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O/rrrrrrrrrrrrrr=?>=^:'`-'_;^^;;;.`*@@@@@@@@@@@@@
+RQ@@@@@@@@@@@@@@@@@@@@@@Q/'~;rrrrr^^:-,S@@@@@@@@@@@@@@@@@@@@@Dr:^rrrrrrrrrrrr^^^:,:9@@K*^r\jHQ@@@@@@@@@@@@@@@@@@@@@@@@@@QDjL=^;^^;;^r|zSz/\^?uyv;__^^^^;:':B@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@QF__;^r^rr^;"':2@@@@@@@@@@@@@@@@@@@@@K__^rrrrrrrrrrrrrr;;,,R@Qo>rrrr*loKMQ@@@@@@@@@@@@@@@@@@@@@@@@@QNRRDHRNQ@QQQ@@@@@@@@Qu;^r^;:'~8@@@@@@@@@@@@
+@@@@@@@o*\JhQ@@@@@@@@@@@@@@9;':;rrrrr^;,,e@@@y:;oQ@@@@@@@@@@@@@z,;^rrrrrrrrrrrrrr;:,:d@Qu>rrrrrr^^r\tPN@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q;;^r^:-^Q@@@@@@@@@@@@
+S8@@@@@&\`  -\Q@@@@@@@@@@@@@Qu:,;^^rrr;:->@@g;```'z&@@@@@@@@@@@Qv::^rrrrrrrrrrrrrr^:`,w@Qo*rrrrrrrrrr^r|]OQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@N::;;,`~d@@@@@@@@@@@@@
+.`,>a@@@@#RNQ@@@@@@@@@@@@@@@@@g?_:;^;r;;:.|DBz;'''-.|d@@@@@@@@@@#=;;^rrrrrrrrrrrrrr^,`.iBQHirrrrrrrrrrrrrrr\jOQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Q\`''``\B@@@@@@@@@@@@@@
+X;,LkOajSXDQ@@@@@@@@@@@@@@@@@@@Qv;,;;;^^;;':/i>;;^^:_,\R@@@@@@@@@a;:;;^rrrrrrr^;;^rr^;:';K@Qo=rrrrrrrrrrrrrrrr*ug@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@q\:`''^H@@@@@@@@@@@@@@@@
+EOF
+sleep 4
+clear
+poweroff
