@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/cargo ] && mkdir "$HOME"/.config/cargo
+env HOME="$HOME"/.config/cargo /usr/bin/cargo "$@"

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 NOTES_HOME="$HOME"/Documents/Notes
-NAVI_PATH="$HOME"/.config/navi/cheats
+NAVI_PATH="$HOME"/.local/share/navi/cheats/personal
 CUR_TAG=""
 
 # Create notes home if doesn't exist
@@ -177,17 +177,29 @@ main_notes() {
 	done
 }
 
+main_menu() {
+	clear
+	echo -e "Select an option:\n\tn - note menu\n\ta - navi menu\n\tt - tag menu"
+	val=""
+	while [[ $val != "q" ]]; do
+		read -s -n 1 val
+		case $val in
+			"n") main_notes && exit 1;;
+			"a") main_navi && exit 1;;
+			"t") main_tag && exit 1;;
+			*)
+		esac
+	done
+}
+
 ############### MAIN EXECUTION CODE ##################
 
+while getopts ":hm" o; do case "${o}" in
+	h) printf "Run notes -m to enter the menu, otherwise search for a note\\n" && exit ;;
+	m) main_menu && exit ;;
+	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;
+esac done
+
+# If no option is provided start searching a note
 clear
-echo -e "Select an option:\n\tn - note menu\n\ta - navi menu\n\tt - tag menu"
-val=""
-while [[ $val != "q" ]]; do
-	read -s -n 1 val
-	case $val in
-		"n") main_notes && exit 1;;
-		"a") main_navi && exit 1;;
-		"t") main_tag && exit 1;;
-		*)
-	esac
-done
+search_note
