@@ -41,7 +41,8 @@ cp -r "$HOME/.config/.lficons" "$DOTFILES_PATH/.config/"
 cp -r "$HOME/.config/mpd" "$DOTFILES_PATH/.config/"
 
 # navi
-cp -r "$HOME/.config/navi" "$DOTFILES_PATH/.config/"
+[ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
+cp -r "$HOME/.local/share/navi" "$DOTFILES_PATH/.local/share/"
 
 # ncmpcpp
 cp -r "$HOME/.config/ncmpcpp" "$DOTFILES_PATH/.config/"

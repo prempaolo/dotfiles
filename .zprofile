@@ -49,7 +49,7 @@ export GROFF_NO_SGR=1
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json:/usr/share/vulkan/icd.d/nv_vulkan_wrapper.json:/usr/share/vulkan/icd.d/nvidia_icd.json
 
 # Navi path for cheats
-export NAVI_PATH=/opt/navi/cheats:"$HOME"/.config/navi/cheats
+#export NAVI_PATH="$HOME"/.config/navi/cheats
 
 # For Java apps problem in dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
