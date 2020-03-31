@@ -50,6 +50,17 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
+" Make split behave like wm
+set splitright
+set splitbelow
+
+" Lf plugin
+let g:lf_map_keys = 0
+map <leader>f :Lf<CR>
+map <leader>t :LfNewTab<CR>
+map <leader>h :split<CR>:Lf<CR>
+map <leader>v :vsplit<CR>:Lf<CR>
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/goyo.vim'
@@ -66,5 +77,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'unblevable/quick-scope'
+Plug 'ptzz/lf.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()

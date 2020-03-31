@@ -14,5 +14,5 @@ image/jpg=img.desktop;
 image/gif=img.desktop;
 application/rss+xml=rss.desktop;
 text/html=firefox-window.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=browser.desktop
+x-scheme-handler/https=browser.desktop

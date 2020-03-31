@@ -1,4 +1,4 @@
 #!/bin/sh
 
 [ ! -d "$HOME"/.config/android-studio ] && mkdir "$HOME"/.config/android-studio
-env HOME="$HOME"/.config/android-studio "$HOME"/Apps/android-studio/bin/studio.sh "$@"
+env HOME="$HOME"/.config/android-studio "$HOME"/.local/src/android-studio/bin/studio.sh "$@"
