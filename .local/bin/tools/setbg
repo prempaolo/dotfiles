@@ -3,4 +3,5 @@
 FILE=$1
 [ -z "$FILE" ] && 
 	FILE="$(find "$HOME"/Pictures/wallpapers/wallpapers/* -type f | shuf -n 1)"
+#wal -i "$FILE"
 xwallpaper --zoom "$FILE"

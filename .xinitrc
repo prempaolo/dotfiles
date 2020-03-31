@@ -2,6 +2,8 @@
 
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
 while :; do
 	ssh-agent dwm
 done

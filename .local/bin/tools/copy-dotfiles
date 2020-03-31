@@ -16,8 +16,8 @@ create_dir() {
 [ ! -d "$DOTFILES_PATH/.config" ] && mkdir "$DOTFILES_PATH/.config"
 [ ! -d "$DOTFILES_PATH/.local" ] && mkdir "$DOTFILES_PATH/.local"
 
-# xprofile, xinitrc, profile
-cp "$HOME/.profile" "$HOME/.xprofile" "$HOME/.xinitrc" "$DOTFILES_PATH/"
+# xprofile, xinitrc, profile, Xresources
+cp "$HOME/.profile" "$HOME/.xprofile" "$HOME/.xinitrc" "$HOME/.Xresources" "$DOTFILES_PATH/"
 
 # bash
 create_dir "bash"
