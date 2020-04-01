@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FILES="$(sxiv -o *)"
+tmp="$(mktemp)"
+/bin/lf -last-dir-path="$tmp"
+SELECTED_PATH="$(cat $tmp)"
+
+[ -z "$FILES" ] || {
+	while IFS= read -r file; do
+		mv "$file" "$SELECTED_PATH/$file"
+	done <<< "$FILES"
+}

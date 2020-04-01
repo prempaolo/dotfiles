@@ -46,14 +46,19 @@ map i $~/.config/lf/pv.sh $f | less -R
 # Open drag and drop with d
 map t $dragon-drag-and-drop -a -x $fx &
 
-# Open all images in current folder in sxiv
-map L $sxiv .*
+# Open all images in current folder in sxiv and select marked image
+map L $lf -remote "send $id select '$(sxiv -o .*)'"
 
 # Delete selected files
 map D delete $f
 
 # Image preview
 map - $~/.config/lf/draw_img.sh $f
+
+# Select images to copy with sxiv
+map C $copy-images
+# Select images to move with sxiv
+map M $move-images
 
 # ------------ PATH SHORTCUTS --------------- #
 
