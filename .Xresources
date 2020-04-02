@@ -1,24 +1,21 @@
 dwm.normbordercolor: #222222
+!dwm.normbgcolor: #282828
 dwm.normbgcolor: #282828
-dwm.normfgcolor: #bbbbbb
-dwm.selbordercolor: #c9cba3
-dwm.selbgcolor: #c9cba3
-dwm.selfgcolor: #000000
+dwm.normfgcolor: #ffffff
+dwm.selbordercolor: #b3b3b3
+dwm.selbgcolor: #283655
+dwm.selfgcolor: #ffffff
+
+! as for now they are useless but they are nice colors, check if they can be used somewhere with dwm
 dwm.color1bg: #c9cba3
 dwm.color2bg: #ffe1a8
 dwm.color3bg: #e26d5c
 dwm.color4bg: #723d46
 dwm.color5bg: #472d30
 dwm.color6bg: #723d46
-dwm.color1d: #000000
-dwm.color2fg: #000000
-dwm.color3fg: #000000
-dwm.color4fg: #ffffff
-dwm.color5fg: #ffffff
-dwm.color6fg: #ffffff
 
 !dmenu.font:
 dmenu.background: #282828
 dmenu.foreground: #bbbbbb
-dmenu.selbackground: #c9cba3
-dmenu.selforeground: #000000
+dmenu.selbackground: #283655
+dmenu.selforeground: #ffffff

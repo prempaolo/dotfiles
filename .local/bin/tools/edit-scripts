@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nvim "$(find "$HOME"/.local/bin -type f | fzf --preview 'bat --style=numbers --color=always {} || highlight -O ansi {} || cat {}')"
