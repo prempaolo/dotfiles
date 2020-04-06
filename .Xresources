@@ -1,21 +1,32 @@
 dwm.normbordercolor: #222222
-!dwm.normbgcolor: #282828
 dwm.normbgcolor: #282828
-dwm.normfgcolor: #ffffff
-dwm.selbordercolor: #b3b3b3
-dwm.selbgcolor: #283655
-dwm.selfgcolor: #ffffff
+dwm.normfgcolor: #fbf1c7
+!dwm.selbordercolor: #b3b3b3
+dwm.selbordercolor: #d5c4a1
+!dwm.selbgcolor: #283655
+!dwm.selbgcolor: #458588
+dwm.selbgcolor: #504945
+dwm.selfgcolor: #fbf1c7
+!dwm.selfgcolor: #000000
 
 ! as for now they are useless but they are nice colors, check if they can be used somewhere with dwm
-dwm.color1bg: #c9cba3
-dwm.color2bg: #ffe1a8
-dwm.color3bg: #e26d5c
-dwm.color4bg: #723d46
-dwm.color5bg: #472d30
-dwm.color6bg: #723d46
+dwm.color0bg: #c9cba3
+dwm.color1bg: #ffe1a8
+dwm.color2bg: #e26d5c
+dwm.color3bg: #723d46
+dwm.color4bg: #472d30
+dwm.color5bg: #723d46
+
+dwm.color0fg: #000000
+dwm.color1fg: #000000
+dwm.color2fg: #000000
+dwm.color3fg: #ffffff
+dwm.color4fg: #ffffff
+dwm.color5fg: #ffffff
 
 !dmenu.font:
 dmenu.background: #282828
 dmenu.foreground: #bbbbbb
-dmenu.selbackground: #283655
+!dmenu.selbackground: #283655
+dmenu.selbackground: #504945
 dmenu.selforeground: #ffffff

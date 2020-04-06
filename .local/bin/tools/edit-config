@@ -1,3 +1,4 @@
 #!/bin/sh
 
-nvim "$(find "$HOME"/.config -type f | fzf --preview 'bat --style=numbers --color=always {} || highlight -O ansi {} || cat {}')"
+FILE="$(find "$HOME"/.config \( -path "$HOME"/.config/go -o -path "$HOME"/.config/polybar -o -path "$HOME"/.config/java \) -prune -o -type f | fzf --preview 'bat --style=numbers --color=always {} || highlight -O ansi {} || cat {}')"
+[ ! -z "$FILE" ] && nvim "$FILE"

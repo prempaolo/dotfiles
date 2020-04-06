@@ -13,5 +13,6 @@ alias na='CMD="$(navi --print)"; print -s "$CMD"; eval "$CMD"'
 alias hc="home-cleaner"
 alias ec="edit-config"
 alias es="edit-scripts"
+alias d="cd $HOME/.local/src/dwm-6.2"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}

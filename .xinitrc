@@ -7,6 +7,7 @@
 while :; do
 	ssh-agent dwm
 done
+#exec wmaker
 #exec awesome
 #exec bspwm
 # In order to have the logs for awesome comment the previus line and uncomment the following one

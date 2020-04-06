@@ -9,5 +9,5 @@ DATE=`date +'%Y-%m-%d-%H:%M:%S'`;
 if [ "$1" == "-s" ]; then
 	sleep 0.2; scrot -s "$HOME"/Pictures/screenshots/"$DATE".png; xclip -t image/png -selection clipboard "$HOME"/Pictures/screenshots/"$DATE".png
 else
-	scrot "$HOME"/Pictures/screenshots/"$DATE".png; xclip -t image/png -selection clipboard "$HOME"/Pictures/screenshots/"$DATE".png
+	sleep 0.2; scrot "$HOME"/Pictures/screenshots/"$DATE".png; xclip -t image/png -selection clipboard "$HOME"/Pictures/screenshots/"$DATE".png
 fi
