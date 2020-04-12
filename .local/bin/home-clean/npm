@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/npm ] && mkdir "$HOME"/.config/npm
+env HOME="$HOME"/.config/npm /usr/bin/npm "$@"

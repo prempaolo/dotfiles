@@ -1,0 +1,32 @@
+#!/bin/sh
+
+help() {
+ echo -e "Usage: article_to_pdf [OPTIONS] -u [URL]\n\nOptions:\n\t-o\topens the article at the end\n\t-s\tsaves the article into $HOME/Articles folder" 
+}
+
+URL=""
+OPEN=0
+SAVE=0
+while getopts ":u:hos" o; do case "${o}" in
+	h) help && exit ;;
+	u) URL="$OPTARG" ;;
+	o) OPEN=1 ;;
+	s) SAVE=1 ;;
+	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;
+esac done
+
+[ -z "$URL" ] && help && exit 1
+[ ! -d "$HOME"/Articles ] && mkdir "$HOME"/Articles
+
+echo "$URL"
+
+readability "$URL" > $HOME/Articles/tmp.html
+[ -f "$HOME"/Articles/tmp.html ] || exit 0
+
+TITLE="$(head -1 $HOME/Articles/tmp.html | awk -F '1>' '{ print $2 }' | sed 's#</h##g; s/^ //g; s/ $//; s/ /_/g')"
+
+pandoc --pdf-engine=pdflatex -V 'fontfamily:dejavu' "$HOME"/Articles/tmp.html -o "$HOME"/Articles/"$TITLE".pdf
+rm "$HOME"/Articles/tmp.html
+
+[ "$OPEN" -eq 1 ] && xdg-open "$HOME"/Articles/"$TITLE".pdf
+[ "$SAVE" -eq 0 ] && rm "$HOME"/Articles/"$TITLE".pdf

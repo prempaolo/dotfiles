@@ -3,6 +3,8 @@ export PATH="$(du -L "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//'
 # Adds `~/Android/Sdk/build-tools/29.0.2/` and all subdirectories to $PATH if they exist
 [ -d "$HOME/.config/java/Android/Sdk/build-tools/29.0.2" ] &&
 	export PATH="$PATH:$(du -L "$HOME/.config/java/Android/Sdk/build-tools/29.0.2/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+# npm
+export PATH="$HOME/.config/npm/.npm/bin:$PATH"
 
 # Home-clean for java (puts all the directories created by java and programs using java in ~/.config/java)
 [ ! -d "$HOME/.config/java" ] && mkdir "$HOME/.config/java"
