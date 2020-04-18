@@ -1,17 +1,22 @@
 #!/bin/sh
 
 help() {
- echo -e "Usage: article_to_pdf [OPTIONS] -u [URL]\n\nOptions:\n\t-o\topens the article at the end\n\t-s\tsaves the article into $HOME/Articles folder" 
+ echo -e "Usage: article_to_pdf [OPTIONS] -u [URL]\n\nOptions:\n\
+					\t-o\topens the article at the end\n\
+					\t-s\tsaves the article into $HOME/Articles folder\n\
+					\t-e\tselect engine to use for pandoc (xelatex, lualatex, pdfroff... default pdflatex)\n" 
 }
 
 URL=""
 OPEN=0
 SAVE=0
-while getopts ":u:hos" o; do case "${o}" in
+ENGINE=""
+while getopts ":u:e:hos" o; do case "${o}" in
 	h) help && exit ;;
 	u) URL="$OPTARG" ;;
 	o) OPEN=1 ;;
 	s) SAVE=1 ;;
+	e) ENGINE="$OPTARG" ;;
 	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;
 esac done
 
@@ -25,7 +30,11 @@ readability "$URL" > $HOME/Articles/tmp.html
 
 TITLE="$(head -1 $HOME/Articles/tmp.html | awk -F '1>' '{ print $2 }' | sed 's#</h##g; s/^ //g; s/ $//; s/ /_/g')"
 
-pandoc --pdf-engine=pdflatex -V 'fontfamily:dejavu' "$HOME"/Articles/tmp.html -o "$HOME"/Articles/"$TITLE".pdf
+if [ -z "$ENGINE" ]; then
+	pandoc --pdf-engine=pdflatex -V 'fontfamily:dejavu' "$HOME"/Articles/tmp.html -o "$HOME"/Articles/"$TITLE".pdf
+else
+	pandoc --pdf-engine="$ENGINE" "$HOME"/Articles/tmp.html -o "$HOME"/Articles/"$TITLE".pdf
+fi
 rm "$HOME"/Articles/tmp.html
 
 [ "$OPEN" -eq 1 ] && xdg-open "$HOME"/Articles/"$TITLE".pdf

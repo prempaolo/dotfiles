@@ -94,3 +94,5 @@ cp -r "$HOME/.local/bin/stupid_programs" "$DOTFILES_PATH/.local/bin/"
 [ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
 cp -r "$HOME/.local/share/fzf" "$DOTFILES_PATH/.local/share/"
 
+# spectrwm
+cp "$HOME/.spectrwm.conf" "$DOTFILES_PATH/"
