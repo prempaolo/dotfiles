@@ -96,3 +96,8 @@ cp -r "$HOME/.local/share/fzf" "$DOTFILES_PATH/.local/share/"
 
 # spectrwm
 cp "$HOME/.spectrwm.conf" "$DOTFILES_PATH/"
+
+# tmux
+[ ! -d "$DOTFILES_PATH/.config/tmux" ] && mkdir "$DOTFILES_PATH/.config/tmux"
+cp "$HOME/.config/tmux/.tmux.conf" "$DOTFILES_PATH/.config/tmux/.tmux.conf"
+

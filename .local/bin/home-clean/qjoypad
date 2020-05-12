@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/qjoypad ] && mkdir "$HOME"/.config/qjoypad
+env HOME="$HOME"/.config/qjoypad /usr/bin/qjoypad "$@"

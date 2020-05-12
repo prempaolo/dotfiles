@@ -1,0 +1,3 @@
+#!/bin/sh
+
+surfraw google -browser=w3m `echo " "| dmenu -p "Search:"`

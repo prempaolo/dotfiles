@@ -14,3 +14,6 @@ trayer --width 5
 
 # View md files in the terminal
 glow <file-name>
+
+# Map/bind gamepad/joypad keys to keyboard
+qjoypad
