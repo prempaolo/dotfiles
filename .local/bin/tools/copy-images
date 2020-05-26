@@ -6,7 +6,7 @@ tmp="$(mktemp)"
 SELECTED_PATH="$(cat $tmp)"
 
 [ -z "$FILES" ] || {
-	while IFS= read -r file; do
-		cp "$file" "$SELECTED_PATH/$file"
-	done <<< "$FILES"
+	echo "$FILES" | while read -r f; do 
+		cp "$f" "$SELECTED_PATH/$file"
+	done
 }

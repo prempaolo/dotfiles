@@ -30,6 +30,9 @@ readability "$URL" > $HOME/Articles/tmp.html
 
 TITLE="$(head -1 $HOME/Articles/tmp.html | awk -F '1>' '{ print $2 }' | sed 's#</h##g; s/^ //g; s/ $//; s/ /_/g')"
 
+# Fixes images width to stay within document
+sed -i -E 's/(<img.*)width="[^"]*"(.*>)/\1width="100%"\2/' "$HOME"/Articles/tmp.html
+
 if [ -z "$ENGINE" ]; then
 	pandoc --pdf-engine=pdflatex -V 'fontfamily:dejavu' "$HOME"/Articles/tmp.html -o "$HOME"/Articles/"$TITLE".pdf
 else

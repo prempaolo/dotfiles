@@ -6,7 +6,7 @@ DATE=`date +'%Y-%m-%d-%H:%M:%S'`;
 [ ! -d "$HOME"/Pictures ] && mkdir "$HOME"/Pictures
 [ ! -d "$HOME"/Pictures/screenshots ] && mkdir "$HOME"/Pictures/screenshots
 
-if [ "$1" == "-s" ]; then
+if [ "$1" = "-s" ]; then
 	sleep 0.2; scrot -s "$HOME"/Pictures/screenshots/"$DATE".png; xclip -t image/png -selection clipboard "$HOME"/Pictures/screenshots/"$DATE".png
 else
 	sleep 0.2; scrot "$HOME"/Pictures/screenshots/"$DATE".png; xclip -t image/png -selection clipboard "$HOME"/Pictures/screenshots/"$DATE".png

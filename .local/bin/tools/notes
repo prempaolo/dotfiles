@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 NOTES_HOME="$HOME"/Documents/Notes
 NAVI_PATH="$HOME"/.local/share/navi/cheats/personal

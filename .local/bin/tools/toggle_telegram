@@ -6,7 +6,7 @@ if [ -z "$IS_RUNNING" ]; then
 	echo "shown" > /tmp/toggle_telegram_info
 else
 	STATUS="$(cat /tmp/toggle_telegram_info)"
-	if [ "$STATUS" == "shown" ]; then
+	if [ "$STATUS" = "shown" ]; then
 		xdo hide -N TelegramDesktop
 		echo "hidden" > /tmp/toggle_telegram_info
 	else

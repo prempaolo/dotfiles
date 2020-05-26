@@ -7,7 +7,7 @@ BOOK="$(find . | grep -e epub -e pdf -e html | awk -F"/" '{for (i=2; i<NF; i++) 
 # Get only the book name (The last word without spaces)
 BOOK="$(echo "$BOOK" | awk -F" " '{ print $NF }')"
 echo "$BOOK"
-if [[ "$BOOK" ]]; then 
+if [ "$BOOK" ]; then 
 	PATH="$(find . -name "$BOOK")"
 	/bin/nohup /bin/zathura "$PATH" >/dev/null 2>&1 &
 fi

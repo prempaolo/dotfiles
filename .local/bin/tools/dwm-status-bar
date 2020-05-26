@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$(mpc status | grep playing)" == "" ]; then
+if [ "$(mpc status | grep playing)" = "" ]; then
 	MPC="  "
 	#MPC=" 🎵 "
 else
@@ -13,16 +13,17 @@ DATE="$(date +"  %a"\ "%d"\ "%h "\|\ \ "  %H":"%M")"
 
 CAPACITY="$(cat /sys/class/power_supply/BAT0/capacity)"
 STATUS="$(cat /sys/class/power_supply/BAT0/status)"
-[ "$CAPACITY" -lt 20 ] && [ "$STATUS" == "Discharging" ] && notify-send -t 3000 -u critical "BATTERY LOW" "Attach it to your charger\!"
+[ "$CAPACITY" -lt 20 ] && [ "$STATUS" = "Discharging" ] && notify-send -t 3000 -u critical "BATTERY LOW" "Attach it to your charger\!"
 BAT_ICON=""
 #BAT_ICON="🔋"
 [ "$CAPACITY" -lt 80 ] && BAT_ICON=""
 [ "$CAPACITY" -lt 30 ] && BAT_ICON=""
 #[ "$STATUS" == "Charging" ] && BAT_ICON="🔌"
-[ "$STATUS" == "Charging" ] && BAT_ICON=""
+[ "$STATUS" = "Unknown" ] && BAT_ICON=""
+[ "$STATUS" = "Charging" ] && BAT_ICON=""
 BATTERY="$BAT_ICON  $CAPACITY% "
 
-if [ "$(amixer get Master | awk -F'[][]' 'END{ print $6 }')" == "off" ]; then
+if [ "$(amixer get Master | awk -F'[][]' 'END{ print $4 }')" = "off" ]; then
 	VOLUME="x $(amixer get Master | awk -F'[][]' 'END{ print $2 }')"
 	#VOLUME="🛑 $(amixer get Master | awk -F'[][]' 'END{ print $2 }')"
 else
@@ -36,4 +37,4 @@ CPU="  $(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')%"
 RAM="  $(free -m | awk 'NR==2{printf "%s/%sMB\n", $3,$2 }')"
 #RAM="💾  $(free -m | awk 'NR==2{printf "%s/%sMB\n", $3,$2 }')"
 
-echo -e "[:] $MPC [;] $RAM [<] $CPU [=] $VOLUME [>] $DATE [=] $BATTERY "
+echo "[:] $MPC [;] $RAM [<] $CPU [=] $VOLUME [>] $DATE [=] $BATTERY "
