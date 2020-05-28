@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	6) st -e "$EDITOR" "$0" ;;
+esac
+
+DATE="$(date +"  %a"\ "%d"\ "%h "\|\ \ "  %H":"%M")"
+#DATE="$(date +"📅 %a"\ "%d"\ "%h "\|\ \ "🕑  %H":"%M")"
+
+echo "[>] $DATE "
+#echo " $DATE "

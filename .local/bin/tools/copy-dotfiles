@@ -89,15 +89,11 @@ cp -r "$HOME/.local/share/applications" "$DOTFILES_PATH/.local/share/"
 cp -r "$HOME/.local/bin/tools" "$DOTFILES_PATH/.local/bin/"
 cp -r "$HOME/.local/bin/home-clean" "$DOTFILES_PATH/.local/bin/"
 cp -r "$HOME/.local/bin/stupid_programs" "$DOTFILES_PATH/.local/bin/"
+cp -r "$HOME/.local/bin/statusbar" "$DOTFILES_PATH/.local/bin/"
 
 # fzf
 [ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
 cp -r "$HOME/.local/share/fzf" "$DOTFILES_PATH/.local/share/"
 
-# spectrwm
-cp "$HOME/.spectrwm.conf" "$DOTFILES_PATH/"
-
 # tmux
-[ ! -d "$DOTFILES_PATH/.config/tmux" ] && mkdir "$DOTFILES_PATH/.config/tmux"
-cp "$HOME/.config/tmux/.tmux.conf" "$DOTFILES_PATH/.config/tmux/.tmux.conf"
-
+cp "$HOME/.tmux.conf" "$DOTFILES_PATH/.tmux.conf"

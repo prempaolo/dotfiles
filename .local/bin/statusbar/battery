@@ -1,0 +1,20 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	6) st -e "$EDITOR" "$0" ;;
+esac
+
+CAPACITY="$(cat /sys/class/power_supply/BAT0/capacity)"
+STATUS="$(cat /sys/class/power_supply/BAT0/status)"
+[ "$CAPACITY" -lt 20 ] && [ "$STATUS" = "Discharging" ] && notify-send -t 3000 -u critical "BATTERY LOW" "Attach it to your charger\!"
+BAT_ICON=""
+#BAT_ICON="🔋"
+[ "$CAPACITY" -lt 80 ] && BAT_ICON=""
+[ "$CAPACITY" -lt 30 ] && BAT_ICON=""
+#[ "$STATUS" == "Charging" ] && BAT_ICON="🔌"
+[ "$STATUS" = "Unknown" ] && BAT_ICON=""
+[ "$STATUS" = "Charging" ] && BAT_ICON=""
+BATTERY="$BAT_ICON  $CAPACITY% "
+
+echo "[=] $BATTERY"
+#echo " $BATTERY"

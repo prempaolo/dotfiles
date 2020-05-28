@@ -18,10 +18,11 @@ xcompmgr &
 # Enable these options if you use dwm
 
 # Status bar for dwm
-while xsetroot -name "`dwm-status-bar`"
-do
-	sleep 1
-done &
+#while xsetroot -name "`dwm-status-bar`"
+#do
+	#sleep 1
+#done &
+dwmblocks &
 # Notification manager for dwm
 dunst &
 

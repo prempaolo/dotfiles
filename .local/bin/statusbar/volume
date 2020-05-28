@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+	4) pactl set-sink-volume @DEFAULT_SINK@ +5000 ;;
+	5) pactl set-sink-volume @DEFAULT_SINK@ -5000 ;;
+	6) st -e "$EDITOR" "$0" ;;
+esac
+
+if [ "$(amixer get Master | awk -F'[][]' 'END{ print $4 }')" = "off" ]; then
+	VOLUME="x $(amixer get Master | awk -F'[][]' 'END{ print $2 }')"
+	#VOLUME="🛑 $(amixer get Master | awk -F'[][]' 'END{ print $2 }')"
+else
+	VOLUME="  $(amixer get Master | awk -F'[][]' 'END{ print $2 }')"
+	#VOLUME="🔊  $(amixer get Master | awk -F'[][]' 'END{ print $2 }')"
+fi
+
+echo "[=] $VOLUME"
+#echo " $VOLUME"
