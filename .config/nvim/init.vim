@@ -14,6 +14,9 @@ set laststatus=2
 set lazyredraw
 set t_Co=256
 
+set clipboard+=unnamedplus
+let g:airline_theme='bubblegum'
+
 let mapleader =" "
 
 " Compile document, be it groff/LaTeX/markdown/etc.
@@ -66,7 +69,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
 Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'https://github.com/vim-latex/vim-latex'
@@ -79,5 +82,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'unblevable/quick-scope'
 Plug 'ptzz/lf.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()

@@ -75,6 +75,8 @@ map O $mimeopen --ask $f
 cmd open ${{
     case $(xdg-mime query filetype $f) in
         text/*) $EDITOR $fx;;
+				image/*) sxiv $fx;;
+				video/*) mpv $fx;;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}

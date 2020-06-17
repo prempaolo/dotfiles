@@ -9,10 +9,13 @@ setxkbmap -option caps:escape
 mpc update
 # Automatically loads configuration for multiple monitors
 autorandr --change
-# Set background
-setbg
 
 xcompmgr &
+
+xset r rate 300 50 &
+
+# Set background
+setbg
 
 #----------------------DWM------------------------#
 # Enable these options if you use dwm

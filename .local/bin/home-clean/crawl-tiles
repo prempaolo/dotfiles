@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/Games/crawl-tiles ] && mkdir "$HOME"/Games/crawl-tiles
+env HOME="$HOME"/Games/crawl-tiles /usr/bin/crawl-tiles "$@"

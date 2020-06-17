@@ -17,3 +17,6 @@ glow <file-name>
 
 # Map/bind gamepad/joypad keys to keyboard
 qjoypad
+
+# Font preview using sxiv
+fontpreview

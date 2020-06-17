@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/Games/itch ] && mkdir "$HOME"/Games/itch
+env HOME="$HOME"/Games/itch /usr/bin/itch "$@"

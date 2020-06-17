@@ -70,15 +70,15 @@
 ##################################
 
 # Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+"pkill -RTMIN+4 dwmblocks; pactl set-sink-volume @DEFAULT_SINK@ +2000"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+"pkill -RTMIN+4 dwmblocks; pactl set-sink-volume @DEFAULT_SINK@ -2000"
    XF86AudioLowerVolume
 
 # Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"pkill -RTMIN+4 dwmblocks; pactl set-sink-mute @DEFAULT_SINK@ toggle"
    XF86AudioMute
 
 # Increase backlight
