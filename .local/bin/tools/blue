@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DISCONNECT=0
+
+while getopts ":hd" o; do case "${o}" in
+	h) printf "Run blue -d to disconnect a device, with no options to interactively connect to one\\n" && exit ;;
+	d) DISCONNECT=1;;
+	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;
+esac done
+
+[ "$(systemctl is-active bluetooth)" = "inactive" ] && echo "Start bluetooth service with:\n\n- sudo systemctl start bluetooth\n" && exit 0
+
+# Disconnect device if -d option is selected
+[ "$DISCONNECT" -eq 1 ] && bluetoothctl disconnect > /dev/null 2>&1 && exit 0
+
+bluetoothctl power on > /dev/null 2>&1
+bluetoothctl agent on > /dev/null 2>&1
+coproc bluetoothctl scan on
+DEVICE="$(echo "$(bluetoothctl devices | fzf --bind 'ctrl-r:reload(bluetoothctl devices)' --header 'Press CTRL-R to reload')" | awk -F' ' '{ print $2 }')"
+
+# Kill bluetoothctl instance running 'scan on' in the background
+pkill -f bluetoothctl
+
+[ ! -z "$DEVICE" ] && bluetoothctl pair "$DEVICE" && bluetoothctl connect "$DEVICE"

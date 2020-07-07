@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ ! -d "$HOME"/.config/wine ] && mkdir "$HOME"/.config/wine
+env HOME="$HOME"/.config/wine /usr/bin/wine64 "$@"

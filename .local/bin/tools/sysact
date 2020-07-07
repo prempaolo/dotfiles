@@ -12,7 +12,7 @@ cmds="\
 🔒 lock		lock_screen
 🚪 leave dwm	kill -TERM $(pidof -s dwm)
 🧭 restart dwm	kill -HUP $(pidof -s dwm)
-💤 hibernate	${hib:-sudo -A systemctl suspend-then-hibernate}
+💤 hibernate	${hib:-systemctl suspend}
 🔃 reboot	${reb:-sudo -A reboot}
 🖥 shutdown	${shut:-sudo -A shutdown -h now}"
 

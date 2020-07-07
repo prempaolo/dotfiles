@@ -20,3 +20,6 @@ qjoypad
 
 # Font preview using sxiv
 fontpreview
+
+# Bluetooth control from cli (for more info, look in the notes)
+bluetoothctl
