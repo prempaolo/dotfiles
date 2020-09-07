@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Readme
+Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/GOG.com/Desperados\\ Wanted\\ Dead\\ or\\ Alive/Documents/Readme.lnk
+Type=Application
+StartupNotify=true
+Path=/home/paolo/.wine/dosdevices/c:/Program Files (x86)/GOG.com/Desperados Wanted Dead or Alive/
+Icon=86A4_Readme.0

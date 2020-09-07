@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=TrackMania United Forever
+Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/TrackMania\\ United\\ Forever/TrackMania\\ United\\ Forever.lnk
+Type=Application
+StartupNotify=true
+Path=/home/paolo/.wine/dosdevices/c:/Games/TrackMania United Forever
+Icon=960B_TmForeverLauncher_0.0
+StartupWMClass=tmforeverlauncher.exe

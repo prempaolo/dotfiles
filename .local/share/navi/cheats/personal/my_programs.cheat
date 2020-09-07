@@ -23,3 +23,9 @@ fontpreview
 
 # Bluetooth control from cli (for more info, look in the notes)
 bluetoothctl
+
+# Program for sketches and manga
+krita
+
+# Emulator for Game Cube games
+dolphin-emu

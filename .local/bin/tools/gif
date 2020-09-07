@@ -1,0 +1,23 @@
+#!/bin/sh
+
+help() {
+	printf "gif [input-file.mp4] [output-file.gif] [scale] [fps]\nScale and fps are optional\nDefault scale=900\nDefault fps=10\n" 
+}
+
+palette="/tmp/palette.png"
+FPS=10
+SCALE=900
+
+while getopts ":h" o; do case "${o}" in
+	h) help && exit ;;
+esac done
+
+[ ! "$1" ] && help && exit
+[ ! "$2" ] && help && exit
+[ "$3" ] && SCALE="$3"
+[ "$4" ] && FPS="$4"
+
+filters="fps=$FPS,scale=$SCALE:-1:flags=lanczos"
+
+ffmpeg -v warning -i "$1" -vf "$filters,palettegen" -y "$palette"
+ffmpeg -v warning -i "$1" -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y "$2"

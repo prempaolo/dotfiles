@@ -16,3 +16,5 @@ application/rss+xml=rss.desktop;
 text/html=firefox-window.desktop;
 x-scheme-handler/http=browser.desktop
 x-scheme-handler/https=browser.desktop
+x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop
+x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop

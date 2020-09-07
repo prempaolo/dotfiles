@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=View TrackMania Original manual
+Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/TrackMania\\ Original/View\\ TrackMania\\ Original\\ manual.lnk
+Type=Application
+StartupNotify=true
+Icon=CF65_TMO_Manual_INTp.0

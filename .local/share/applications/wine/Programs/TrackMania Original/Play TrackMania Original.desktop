@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Play TrackMania Original
+Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/TrackMania\\ Original/Play\\ TrackMania\\ Original.lnk
+Type=Application
+StartupNotify=true
+Path=/home/paolo/.wine/dosdevices/c:/Program Files (x86)/TrackMania Original
+Icon=B5E6_TmOriginalLauncher.0
+StartupWMClass=tmoriginallauncher.exe

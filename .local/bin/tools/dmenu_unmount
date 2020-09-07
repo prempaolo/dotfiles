@@ -10,9 +10,10 @@ unmountusb() {
 	}
 
 unmountandroid() { \
-	chosen=$(awk '/simple-mtpfs/ {print $2}' /etc/mtab | dmenu -i -p "Unmount which device?")
-	[ -z "$chosen" ] && exit
-	fusermount -u "$chosen" && rmdir "$HOME/MountAndroid" && notify-send "🤖 Android unmounting" "$chosen unmounted."
+	case "$(printf "Yes\\nNo" | dmenu -i -p "Unmount Android device?")" in
+		Yes) fusermount -u "$HOME/MountAndroid" && rmdir "$HOME/MountAndroid" && notify-send "🤖 Android unmounting" "Device unmounted." ;;
+		No) exit ;;
+	esac
 }
 
 asktype() { \
@@ -24,7 +25,7 @@ asktype() { \
 
 drives=$(lsblk -nrpo "name,type,size,mountpoint" | awk '$2=="part"&&$4!~/\/boot|\/home$|SWAP/&&length($4)>1{printf "%s (%s)\n",$4,$3}')
 
-if ! grep simple-mtpfs /etc/mtab; then
+if [ -z "$HOME/MountAndroid" ]; then
 	[ -z "$drives" ] && echo "No drives to unmount." &&  exit
 	echo "Unmountable USB drive detected."
 	unmountusb

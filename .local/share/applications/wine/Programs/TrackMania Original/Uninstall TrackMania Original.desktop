@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Uninstall TrackMania Original
+Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/TrackMania\\ Original/Uninstall\\ TrackMania\\ Original.lnk
+Type=Application
+StartupNotify=true
+Icon=834E_unins000.0
+StartupWMClass=unins000.exe

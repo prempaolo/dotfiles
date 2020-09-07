@@ -32,6 +32,8 @@ set drawbox on
 # use enter for shell commands
 map <enter> shell
 
+# ------------- CUSTOM ---------------- #
+
 # map fzf to the f key
 map f $lf -remote "send $id select '$(fzfp || fzf)'"
 map F $lf -remote "send $id select '$(find . -type d | fzfp || find . -type d | fzf)'"
@@ -39,8 +41,6 @@ map F $lf -remote "send $id select '$(find . -type d | fzfp || find . -type d | 
 # execute current file (must be executable)
 map x $$f
 map X !$f
-
-# ------------- CUSTOM ---------------- #
 
 # previewr
 set previewer ~/.config/lf/pv.sh
@@ -62,6 +62,9 @@ map - $~/.config/lf/draw_img.sh $f
 map C $copy-images
 # Select images to move with sxiv
 map M $move-images
+
+# Copy file name to primary clipboard
+map Y $echo -n $f | xclip -selection clipboard
 
 # ------------ PATH SHORTCUTS --------------- #
 

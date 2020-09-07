@@ -47,8 +47,8 @@ export LESS_TERMCAP_ZO=$(tput ssupm)
 export LESS_TERMCAP_ZW=$(tput rsupm)
 export GROFF_NO_SGR=1   
 
-# For Vulkan support
-export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json:/usr/share/vulkan/icd.d/nv_vulkan_wrapper.json:/usr/share/vulkan/icd.d/nvidia_icd.json
+# For scaling QT application without problems
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
 # Navi path for cheats
 #export NAVI_PATH="$HOME"/.config/navi/cheats
@@ -58,3 +58,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Start graphical server if dwm not already running.
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x dwm >/dev/null && exec startx
+
+######### For Vulkan support #########
+# Use this to use vulkan with pvkrun
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nv_vulkan_wrapper.json:/usr/share/vulkan/icd.d/nvidia_icd.json:/usr/share/vulkan/icd.d/intel_icd.x86_64.json
+# Use this to use vulkan in nvidia-xrun
+#export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
