@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Uninstall TrackMania United Forever
-Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/TrackMania\\ United\\ Forever/Uninstall\\ TrackMania\\ United\\ Forever.lnk
-Type=Application
-StartupNotify=true
-Path=/home/paolo/.wine/dosdevices/c:/Games/TrackMania United Forever
-Icon=F7BF_unins000.0
-StartupWMClass=unins000.exe

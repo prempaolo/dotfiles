@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Manual
-Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/GOG.com/Desperados\\ Wanted\\ Dead\\ or\\ Alive/Documents/Manual.lnk
-Type=Application
-StartupNotify=true
-Path=/home/paolo/.wine/dosdevices/c:/Program Files (x86)/GOG.com/Desperados Wanted Dead or Alive/
-Icon=63F3_Manual.0

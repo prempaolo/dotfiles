@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Epic Games Launcher
-Exec=env WINEPREFIX="/home/paolo/Games/epic-games-store" wine /home/ubuntu/buildbot/runners/wine/lutris-5.7-8-x86_64/bin/wine /Unix /home/paolo/Games/epic-games-store/dosdevices/c:/users/paolo/Start\\ Menu/Programs/Epic\\ Games\\ Launcher.lnk
-Type=Application
-StartupNotify=true
-Comment=Launch the Epic Games Launcher
-Path=/home/paolo/Games/epic-games-store/dosdevices/c:/Program Files (x86)/Epic Games/
-Icon=09BE_EpicGamesLauncher.0
-StartupWMClass=epicgameslauncher.exe

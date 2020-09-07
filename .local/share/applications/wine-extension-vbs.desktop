@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=A Wine application
-MimeType=application/x-wine-extension-vbs;
-Exec=env WINEPREFIX="/home/paolo/Games/epic-games-store" /home/ubuntu/buildbot/runners/wine/lutris-5.7-8-x86_64/bin/wine start /ProgIDOpen VBSFile %f
-NoDisplay=true
-StartupNotify=true

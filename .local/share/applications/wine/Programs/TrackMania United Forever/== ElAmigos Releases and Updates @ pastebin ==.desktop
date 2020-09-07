@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=== ElAmigos Releases and Updates @ pastebin ==
-Exec=env WINEPREFIX="/home/paolo/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/paolo/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/TrackMania\\ United\\ Forever/==\\ ElAmigos\\ Releases\\ and\\ Updates\\ @\\ pastebin\\ ==.lnk
-Type=Application
-StartupNotify=true
-Path=/home/paolo/.wine/dosdevices/c:/Games/TrackMania United Forever
-Icon=7306__ElAmigos Releases and Updates.0
