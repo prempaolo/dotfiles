@@ -1,11 +1,13 @@
 #!/bin/sh
 
-xdotool key Control+minus
-xdotool key Control+minus
-xdotool key Control+minus
-xdotool key Control+minus
+xdotool key Shift+Alt+Down
+xdotool key Shift+Alt+Down
+xdotool key Shift+Alt+Down
+xdotool key Shift+Alt+Down
+xdotool key Shift+Alt+Down
+xdotool key Shift+Alt+Down
 clear
-ffplay -af volume=0.05 -autoexit -nodisp "$HOME/.local/bin/stupid_programs/"Nani.mp3 &> /dev/null &
+ffplay -loglevel quiet -af volume=0.05 -autoexit -nodisp "$HOME/.local/bin/stupid_programs/"Nani.mp3 &
 cat << "EOF"
 88888888888RRRRRRRRRRRRRRRRRRRRd6k6666kkkhkkk6$9qqKOKKqqqKKqqq9999qq$kmSz/|>r>rrrr*?|\iJSmXE666hhhEhhhhk666kkkkk6qODRDDDRRRRRDDDDRRRRRRR8RRRRRRR8RRRRRRRRR8888RRRRRR
 QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQNggNNNgggggggNNNNN###BB####NNNNNRKX}\^:,,'''''''''''''',,::^|v2hH8NNNg88M8888MgNBQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
@@ -198,4 +200,3 @@ X;,LkOajSXDQ@@@@@@@@@@@@@@@@@@@Qv;,;;;^^;;':/i>;;^^:_,\R@@@@@@@@@a;:;;^rrrrrrr^;
 EOF
 sleep 4
 clear
-poweroff

@@ -3,12 +3,6 @@ export PATH="$(du -L "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//'
 # Adds `~/Android/Sdk/build-tools/29.0.2/` and all subdirectories to $PATH if they exist
 [ -d "$HOME/.config/java/Android/Sdk/build-tools/29.0.2" ] &&
 	export PATH="$PATH:$(du -L "$HOME/.config/java/Android/Sdk/build-tools/29.0.2/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-# npm
-export PATH="$HOME/.config/npm/.npm/bin:$PATH"
-
-# Home-clean for java (puts all the directories created by java and programs using java in ~/.config/java)
-[ ! -d "$HOME/.config/java" ] && mkdir "$HOME/.config/java"
-export _JAVA_OPTIONS="-Duser.home=$HOME/.config/java -Duser.dir=$HOME/.config/java"
 
 # Default programs
 export EDITOR="nvim"
@@ -30,6 +24,9 @@ export GOPATH="$HOME/.config/go"
 # For nvidia drivers
 [ ! -d "$HOME/.config/nvidia" ] && mkdir "$HOME/.config/nvidia"
 export __GL_SHADER_DISK_CACHE_PATH="$HOME/.config/nvidia"
+# Home-clean for java (puts all the directories created by java and programs using java in ~/.config/java)
+#[ ! -d "$HOME/.config/java" ] && mkdir "$HOME/.config/java"
+#export _JAVA_OPTIONS="-Duser.home=$HOME/.config/java -Duser.dir=$HOME/.config/java"
 
 # Colored man pages
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) # green

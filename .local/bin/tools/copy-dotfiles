@@ -82,7 +82,15 @@ cp -r "$HOME/.config/aliasrc" "$DOTFILES_PATH/.config/"
 # mime-apps
 cp -r "$HOME/.config/mimeapps.list" "$DOTFILES_PATH/.config/"
 [ ! -d "$DOTFILES_PATH/.local/share" ] && mkdir "$DOTFILES_PATH/.local/share"
-cp -r "$HOME/.local/share/applications" "$DOTFILES_PATH/.local/share/"
+[ ! -d "$DOTFILES_PATH/.local/share/applications" ] && mkdir "$DOTFILES_PATH/.local/share/applications"
+cp "$HOME/.local/share/applications/browser.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/firefox-window.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/img.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/mail.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/pdf.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/rss.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/text.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/torrent.desktop" "$DOTFILES_PATH/.local/share/applications/"
 
 # scripts
 [ ! -d "$DOTFILES_PATH/.local/bin" ] && mkdir "$DOTFILES_PATH/.local/bin"

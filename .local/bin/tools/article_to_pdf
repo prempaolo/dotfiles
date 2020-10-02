@@ -25,7 +25,7 @@ esac done
 
 echo "$URL"
 
-readability "$URL" > $HOME/Articles/tmp.html
+readable "$URL" > $HOME/Articles/tmp.html
 [ -f "$HOME"/Articles/tmp.html ] || exit 0
 
 TITLE="$(head -1 $HOME/Articles/tmp.html | awk -F '1>' '{ print $2 }' | sed 's#</h##g; s/^ //g; s/ $//; s/ /_/g')"
