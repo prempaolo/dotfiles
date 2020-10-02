@@ -4,8 +4,6 @@ xdotool key Shift+Alt+Down
 xdotool key Shift+Alt+Down
 xdotool key Shift+Alt+Down
 xdotool key Shift+Alt+Down
-xdotool key Shift+Alt+Down
-xdotool key Shift+Alt+Down
 clear
 ffplay -loglevel quiet -af volume=0.05 -autoexit -nodisp "$HOME/.local/bin/stupid_programs/"Nani.mp3 &
 cat << "EOF"
@@ -200,3 +198,4 @@ X;,LkOajSXDQ@@@@@@@@@@@@@@@@@@@Qv;,;;;^^;;':/i>;;^^:_,\R@@@@@@@@@a;:;;^rrrrrrr^;
 EOF
 sleep 4
 clear
+poweroff
