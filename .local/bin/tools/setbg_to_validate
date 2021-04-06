@@ -3,4 +3,4 @@
 FILE=$1
 [ -z "$FILE" ] && 
 	FILE="$(find "$HOME"/Pictures/wallpapers/wallpapers_to_validate/* -type f | shuf -n 1)"
-xwallpaper --zoom "$FILE"
+/usr/bin/xwallpaper --zoom "$FILE"

@@ -29,3 +29,18 @@ krita
 
 # Emulator for Game Cube games
 dolphin-emu
+
+# Find name of key for key bindings
+xev
+
+# Edit PDF insert signature
+xournalpp
+
+# Edit Kindle Comic Manga
+kcc
+
+# Manage blog create static html content from markdown files
+blogit
+
+# Print file from command line using default settings (in case, change default settings with system-config-printer program)
+lpr <file-name>

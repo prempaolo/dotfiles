@@ -14,7 +14,7 @@ set shellopts '-eu'
 set icons
 
 # Set color to 256
-set color256
+#set color256
 
 # set internal field separator (IFS) to "\n" for shell commands
 # This is useful to automatically split file names in $fs and $fx properly
@@ -34,9 +34,12 @@ map <enter> shell
 
 # ------------- CUSTOM ---------------- #
 
+# Set cleaner for image preview with ueberzug
+set cleaner ~/.config/lf/clear_img.sh
+
 # map fzf to the f key
-map f $lf -remote "send $id select '$(fzfp || fzf)'"
-map F $lf -remote "send $id select '$(find . -type d | fzfp || find . -type d | fzf)'"
+map f $lf -remote "send $id select '$(fzf)'"
+map F $lf -remote "send $id select '$(find . -type d | fzf)'"
 
 # execute current file (must be executable)
 map x $$f
@@ -46,11 +49,14 @@ map X !$f
 set previewer ~/.config/lf/pv.sh
 map i $~/.config/lf/pv.sh $f | less -R
 
-# Open drag and drop with d
+# Open drag and drop with t
 map t $dragon-drag-and-drop -a -x $fx &
 
 # Open all images in current folder in sxiv and select marked image
 map L $lf -remote "send $id select '$(sxiv -o .)'"
+
+# Open all images in current folder in ucollage
+map P $ucollage
 
 # Delete selected files
 map D delete $f
@@ -81,6 +87,8 @@ map O $mimeopen --ask $f
 cmd open ${{
     case $(xdg-mime query filetype $f) in
         text/*) $EDITOR $fx;;
+				image/gif) mpv $fx;;
+				audio/*) mpv $fx;;
 				image/*) sxiv $fx;;
 				video/*) mpv $fx;;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;

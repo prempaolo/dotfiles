@@ -51,7 +51,8 @@ cp -r "$HOME/.config/mpd" "$DOTFILES_PATH/.config/"
 cp -r "$HOME/.local/share/navi" "$DOTFILES_PATH/.local/share/"
 
 # ncmpcpp
-cp -r "$HOME/.config/ncmpcpp" "$DOTFILES_PATH/.config/"
+[ ! -d "$DOTFILES_PATH/.config/ncmpcpp" ] && mkdir "$DOTFILES_PATH/.config/ncmpcpp"
+cp -r "$HOME/.config/ncmpcpp/bindings" "$DOTFILES_PATH/.config/ncmpcpp/bindings"
 
 # nvim
 create_dir "nvim"
@@ -86,6 +87,7 @@ cp -r "$HOME/.config/mimeapps.list" "$DOTFILES_PATH/.config/"
 cp "$HOME/.local/share/applications/browser.desktop" "$DOTFILES_PATH/.local/share/applications/"
 cp "$HOME/.local/share/applications/firefox-window.desktop" "$DOTFILES_PATH/.local/share/applications/"
 cp "$HOME/.local/share/applications/img.desktop" "$DOTFILES_PATH/.local/share/applications/"
+cp "$HOME/.local/share/applications/video.desktop" "$DOTFILES_PATH/.local/share/applications/"
 cp "$HOME/.local/share/applications/mail.desktop" "$DOTFILES_PATH/.local/share/applications/"
 cp "$HOME/.local/share/applications/pdf.desktop" "$DOTFILES_PATH/.local/share/applications/"
 cp "$HOME/.local/share/applications/rss.desktop" "$DOTFILES_PATH/.local/share/applications/"

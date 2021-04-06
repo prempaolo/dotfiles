@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo systemctl start bluetooth
+bluetoothctl power on > /dev/null 2>&1
+bluetoothctl connect "B4:CE:40:EB:E6:FD"

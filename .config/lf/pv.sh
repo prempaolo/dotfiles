@@ -1,13 +1,49 @@
 #!/bin/sh
 
+# Calculate where the image should be placed on the screen.
+num=$(printf "%0.f\n" "`echo "$(tput cols) / 2" | bc`")
+numb=$(printf "%0.f\n" "`echo "$(tput cols) - $num - 1" | bc`")
+numc=$(printf "%0.f\n" "`echo "$(tput lines) - 2" | bc`")
+
 case "$1" in
-	*.tar*) tar tf "$1";;
-	*.zip) unzip -l "$1";;
+	*.tgz|*.tar.gz) tar tzf "$1";;
+	*.tar.bz2|*.tbz2) tar tjf "$1";;
+	*.tar.txz|*.txz) xz --list "$1";;
+	*.tar) tar tf "$1";;
+	*.zip|*.jar|*.war|*.ear|*.oxt) unzip -l "$1";;
 	*.rar) unrar l "$1";;
 	*.7z) 7z l "$1";;
-	*.pdf) pdftotext "$1" -;;
-	*.jpg) chafa --fill=block --symbols=block -c 256 -s 80x"${HEIGHT}" "$1";;
-	*.png) chafa --fill=block --symbols=block -c 256 -s 80x"${HEIGHT}" "$1";;
-	*.jpeg) chafa --fill=block --symbols=block -c 256 -s 80x"${HEIGHT}" "$1";;
-	*) highlight -O ansi "$1" || cat "$1";;
+	*.[1-8]) man "$1" | col -b ;;
+	*.o) nm "$1" | less ;;
+	*.torrent) transmission-show "$1";;
+	*.iso) iso-info --no-header -l "$1";;
+	*odt,*.ods,*.odp,*.sxw) odt2txt "$1";;
+	*.doc) catdoc "$1" ;;
+	*.docx) docx2txt "$1" - ;;
+	*.csv) cat "$1" | sed s/,/\\n/g ;;
+	*.pdf)
+		CACHE=$(mktemp /tmp/thumbcache.XXXXX)
+		pdftoppm -png -f 1 -singlefile "$1" "$CACHE"
+		~/.config/lf/draw_img.sh "$CACHE.png" $num 2 $numb $numc
+		exit 1
+		#pdftotext "$1" -
+		;;
+	*.epub)
+		CACHE=$(mktemp /tmp/thumbcache.XXXXX)
+		epub-thumbnailer "$1" "$CACHE" 1024
+		~/.config/lf/draw_img.sh "$CACHE" $num 2 $numb $numc
+		exit 1
+		;;
+	*.bmp|*.jpg|*.jpeg|*.png|*.xpm)
+		~/.config/lf/draw_img.sh "$1" $num 2 $numb $numc
+		exit 1
+		;;
+	*.wav|*.mp3|*.flac|*.m4a|*.wma|*.ape|*.ac3|*.og[agx]|*.spx|*.opus|*.as[fx]|*.flac) exiftool "$1";;
+	*.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.fl[icv]|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.r[am]|*.qt|*.divx)
+		CACHE=$(mktemp /tmp/thumbcache.XXXXX)
+		ffmpegthumbnailer -i "$1" -o "$CACHE" -s 0
+		~/.config/lf/draw_img.sh "$CACHE" $num 2 $numb $numc
+		exit 1
+		;;
+	*) highlight --out-format ansi "$1" || cat "$1";;
 esac
