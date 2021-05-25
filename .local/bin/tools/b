@@ -1,12 +1,11 @@
 #!/bin/sh
 
 WD="$(pwd)"
-cd ~/Books
+cd "$HOME/Books"
 # Get all the books and use the directories and sub-directories as tags
-BOOK="$(find . | grep -e epub -e pdf -e html | awk -F"/" '{for (i=2; i<NF; i++) printf "\033[1;34m" $i "\033[0m" " "; print $NF }' | fzf --ansi)"
-# Get only the book name (The last word without spaces)
-BOOK="$(echo "$BOOK" | awk -F" " '{ print $NF }')"
-echo "$BOOK"
+BOOK="$(find . | grep -e epub -e pdf -e html | awk -F"/" '{for (i=2; i<NF; i++) printf "\033[1;34m#" $i "\033[0m" " "; print $NF }' | fzf --ansi)"
+# Get only the book name (the words not starting with the character #)
+BOOK="$(echo "$BOOK" | sed 's/#[A-Za-z0-9]* //g')"
 if [ "$BOOK" ]; then 
 	PATH="$(find . -name "$BOOK")"
 	/bin/nohup /bin/zathura "$PATH" >/dev/null 2>&1 &
