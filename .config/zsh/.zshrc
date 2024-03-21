@@ -50,6 +50,8 @@ export LF_ICONS
 
 # Cd in current directory when closing lf
 source "$HOME/.config/lf/lfcd.sh"
+
+eval "$(navi widget zsh)"
 bindkey -s '^o' 'lf\n'  # zsh
 
 source "$HOME/.local/share/fzf/completion.zsh"
