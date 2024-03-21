@@ -27,7 +27,7 @@ set ifs "\n"
 set scrolloff 10
 
 # draw borders like ranger
-set drawbox on
+set drawbox true
 
 # use enter for shell commands
 map <enter> shell
