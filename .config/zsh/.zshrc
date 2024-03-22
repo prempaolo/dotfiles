@@ -56,3 +56,6 @@ bindkey -s '^o' 'lf\n'  # zsh
 
 source "$HOME/.local/share/fzf/completion.zsh"
 source "$HOME/.local/share/fzf/key-bindings.zsh"
+
+# Add .local/bin to PATH
+export PATH="$(du -L "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//'):$PATH"
