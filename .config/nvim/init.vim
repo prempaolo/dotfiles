@@ -83,5 +83,6 @@ Plug 'unblevable/quick-scope'
 Plug 'ptzz/lf.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
