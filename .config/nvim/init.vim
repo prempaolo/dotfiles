@@ -71,11 +71,12 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 " CoC NVIM plugin
 " Sets the Tab key to work properly
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " Sets the Enter key to work properly
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
