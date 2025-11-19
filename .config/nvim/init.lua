@@ -111,11 +111,10 @@ vim.api.nvim_set_keymap("n", "<c-f>", ":call smooth_scroll#down(&scroll*2, 10, 4
 -----------------------------------------------------------
 -- LSP setup (Pyright, Ruff, HTML)
 -----------------------------------------------------------
-local lspconfig = require("lspconfig")
 
-lspconfig.pyright.setup {}
-lspconfig.ruff.setup {}
-lspconfig.html.setup {}
+vim.lsp.config("pyright", {})
+vim.lsp.config("ruff", {})
+vim.lsp.config("html", {})
 
 -----------------------------------------------------------
 -- Mason setup
