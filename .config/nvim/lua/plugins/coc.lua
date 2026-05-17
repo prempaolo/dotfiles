@@ -1,7 +1,6 @@
 local M = {
   "neoclide/coc.nvim",
-  branch = "master",
-  build = "yarn install --frozen-lockfile",
+  branch = "release"
 }
 
 M.config = function()
